@@ -1,0 +1,2872 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lễ hội Mục đồng làng Phong Lệ (Đà Nẵng) — Trình chiếu 31 Slide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-pearl: #FDFBF7;
+      --bg-sand: #F5EFEB;
+      --bg-sand-deep: #EDE3D8;
+      --glass-card: rgba(255, 255, 255, 0.90);
+      --glass-soft: rgba(250, 245, 238, 0.86);
+      --border-warm: rgba(212, 154, 61, 0.30);
+      --border-subtle: #E6DBD0;
+      --border-strong: #D4C3B0;
+
+      --text-primary: #1A1A1A;
+      --text-chestnut: #2A1A0A;
+      --text-muted: #5A4738;
+      --text-subtle: #745F4F;
+
+      --accent-gold: #D49A3D;
+      --accent-gold-dark: #8F6012;
+      --accent-gold-bg: #FCF4E4;
+
+      --accent-vermilion: #B83A2C;
+      --accent-vermilion-dark: #8F281D;
+      --accent-vermilion-bg: #FAEDEB;
+
+      --accent-moss: #3E5638;
+      --accent-moss-bg: #EDF3EB;
+
+      --shadow-card: 0 12px 32px -12px rgba(42, 26, 10, 0.11), 0 2px 6px rgba(42, 26, 10, 0.05);
+      --shadow-photo: 0 18px 40px -14px rgba(42, 26, 10, 0.22), 0 4px 12px rgba(42, 26, 10, 0.08);
+      --shadow-stage: 0 24px 60px -18px rgba(42, 26, 10, 0.18), 0 4px 14px rgba(42, 26, 10, 0.06);
+      --glow-gold: 0 0 0 2px #D49A3D, 0 0 30px rgba(212, 154, 61, 0.34), 0 16px 36px -14px rgba(42, 26, 10, 0.20);
+
+      --radius-photo: 16px;
+      --radius-video: 16px;
+      --radius-card: 16px;
+      --radius-stage: 18px;
+      --radius-pill: 999px;
+
+      --font-sans: 'Be Vietnam Pro', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: var(--font-sans);
+      background-color: var(--bg-sand);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    body {
+      background-image:
+        radial-gradient(circle at 10% 15%, rgba(212, 154, 61, 0.14), transparent 38%),
+        radial-gradient(circle at 90% 85%, rgba(184, 58, 44, 0.08), transparent 40%),
+        linear-gradient(160deg, #F5EFEB 0%, #EFE5DA 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    :focus-visible { outline: 3px solid var(--accent-vermilion); outline-offset: 2px; }
+    button { font-family: inherit; cursor: pointer; border: none; background: transparent; color: inherit; }
+    a { color: var(--accent-vermilion); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* TOP BAR — ALWAYS VISIBLE FROSTED GLASS HEADER, SPLIT TWO-SIDE LAYOUT */
+    .top-bar {
+      position: relative;
+      height: 52px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(253, 251, 247, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 195, 176, 0.58);
+      box-shadow: 0 2px 10px rgba(42, 26, 10, 0.05);
+      z-index: 40;
+      flex-shrink: 0;
+    }
+
+    .top-left, .top-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 13px 4px 6px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      box-shadow: 0 2px 8px rgba(42, 26, 10, 0.05);
+      flex-shrink: 0;
+    }
+    .brand-dot {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--accent-vermilion); color: #FDFBF7;
+      display: grid; place-items: center; flex-shrink: 0;
+    }
+    .brand-title { font-size: 13.5px; font-weight: 700; color: var(--text-chestnut); white-space: nowrap; }
+
+    .icon-btn {
+      min-width: 38px; height: 36px; padding: 0 12px; border-radius: 10px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border-subtle); color: var(--text-chestnut);
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      font-size: 12.5px; font-weight: 600; white-space: nowrap;
+      transition: background-color 180ms var(--ease), border-color 180ms var(--ease), color 180ms var(--ease), transform 180ms var(--ease), box-shadow 180ms var(--ease);
+      box-shadow: 0 2px 6px rgba(42, 26, 10, 0.04);
+    }
+    .icon-btn:hover { background: #FFFFFF; border-color: var(--accent-gold); color: var(--accent-vermilion); }
+    .icon-btn.active { background: var(--text-chestnut); border-color: var(--text-chestnut); color: #FDFBF7; }
+    .icon-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+    /* PROMINENT PRESENT BUTTON AT TOP-RIGHT */
+    .icon-btn.btn-present {
+      height: 38px;
+      padding: 0 17px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--accent-vermilion) 0%, var(--accent-vermilion-dark) 100%);
+      border: 1px solid rgba(212, 154, 61, 0.65);
+      color: #FDFBF7;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      box-shadow: 0 6px 16px rgba(184, 58, 44, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+    .icon-btn.btn-present:hover {
+      background: linear-gradient(135deg, #C74233 0%, var(--accent-vermilion) 100%);
+      border-color: var(--accent-gold);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 22px rgba(184, 58, 44, 0.34);
+    }
+    .icon-btn.btn-present.active {
+      background: linear-gradient(135deg, #2A1A0A 0%, #442A13 100%);
+      border-color: var(--accent-gold);
+      color: #FDFBF7;
+    }
+
+    /* STAGE & FULL-SCREEN RESPONSIVE SLIDE FRAME (TRUE 96vw / 92vh EXPANSION) */
+    .stage-wrapper {
+      flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center;
+      padding: 6px 14px 10px; overflow: hidden; position: relative;
+    }
+    .slide-viewport {
+      width: 96vw; height: 100%; max-height: 92vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .slide-frame {
+      width: 1440px; height: 810px;
+      background:
+        radial-gradient(circle at 86% 12%, rgba(212, 154, 61, 0.12), transparent 36%),
+        radial-gradient(circle at 12% 92%, rgba(245, 239, 235, 0.95), transparent 50%),
+        linear-gradient(155deg, #FDFBF7 0%, #F5EFEB 100%);
+      border-radius: var(--radius-stage);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-stage);
+      position: relative; overflow: hidden; transform-origin: center center;
+      flex-shrink: 0; display: flex; flex-direction: column;
+    }
+    .slide-frame::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+      background: linear-gradient(90deg, var(--accent-vermilion) 0%, var(--accent-gold) 65%, #E7C278 100%);
+      z-index: 6;
+    }
+
+    .slide-content {
+      flex: 1; min-height: 0; padding: 30px 46px 22px;
+      display: flex; flex-direction: column; position: relative; z-index: 2;
+      animation: slideReveal 240ms var(--ease);
+    }
+    @keyframes slideReveal { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+
+    .slide-footer-bar {
+      height: 36px; padding: 0 46px;
+      border-top: 1px solid rgba(212, 195, 176, 0.55);
+      background: rgba(245, 239, 235, 0.72);
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px; font-weight: 600; color: var(--text-subtle); z-index: 2;
+    }
+    .slide-num-badge { color: var(--accent-vermilion); font-weight: 800; letter-spacing: 0.05em; }
+
+    /* HEADER & LARGE PROJECTOR-READY TYPOGRAPHY */
+    .slide-header { margin-bottom: 18px; display: flex; flex-direction: column; gap: 7px; }
+    .eyebrow-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .tag-pill {
+      display: inline-flex; align-items: center; gap: 7px; padding: 6px 15px;
+      border-radius: var(--radius-pill); font-size: 1.05rem; font-weight: 800;
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .tag-pill.vermilion { background: var(--accent-vermilion-bg); color: var(--accent-vermilion-dark); border: 1px solid rgba(184, 58, 44, 0.25); }
+    .tag-pill.gold { background: var(--accent-gold-bg); color: var(--accent-gold-dark); border: 1px solid rgba(212, 154, 61, 0.48); }
+    .tag-pill.moss { background: var(--accent-moss-bg); color: var(--accent-moss); border: 1px solid rgba(62, 86, 56, 0.26); }
+
+    .slide-index-tag { font-size: 1.05rem; font-weight: 800; color: var(--accent-gold-dark); letter-spacing: 0.05em; }
+    .slide-title { font-size: 2.3rem; line-height: 1.16; font-weight: 800; color: var(--text-chestnut); text-transform: uppercase; letter-spacing: -0.015em; }
+    .slide-subtitle { font-size: 1.15rem; line-height: 1.52; color: var(--text-muted); font-weight: 500; max-width: 1080px; }
+
+    /* BENTO CARD SYSTEM */
+    .bento-card {
+      background: var(--glass-card); backdrop-filter: blur(10px);
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-card);
+      padding: 20px 24px; box-shadow: var(--shadow-card);
+      position: relative; display: flex; flex-direction: column;
+    }
+    .bento-card.soft { background: var(--glass-soft); }
+    .bento-card.dark-chestnut {
+      background: linear-gradient(145deg, #2A1A0A 0%, #422A14 100%);
+      border-color: rgba(212, 154, 61, 0.42); color: #FDFBF7;
+    }
+    .bento-card.accent-gold { border-left: 5px solid var(--accent-gold); }
+    .bento-card.accent-vermilion { border-left: 5px solid var(--accent-vermilion); }
+    .bento-card.accent-moss { border-left: 5px solid var(--accent-moss); }
+    .bento-card.top-gold { border-top: 4px solid var(--accent-gold); }
+    .bento-card.top-vermilion { border-top: 4px solid var(--accent-vermilion); }
+    .bento-card.top-moss { border-top: 4px solid var(--accent-moss); }
+
+    .card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .card-icon {
+      width: 42px; height: 42px; border-radius: 12px;
+      display: grid; place-items: center; flex-shrink: 0;
+    }
+    .card-icon.gold { background: var(--accent-gold-bg); color: var(--accent-gold-dark); }
+    .card-icon.vermilion { background: var(--accent-vermilion-bg); color: var(--accent-vermilion); }
+    .card-icon.moss { background: var(--accent-moss-bg); color: var(--accent-moss); }
+    .card-icon.chestnut { background: #EFE6DB; color: var(--text-chestnut); }
+    .card-icon svg { width: 22px; height: 22px; }
+
+    .card-title { font-size: 1.32rem; font-weight: 800; color: var(--text-chestnut); line-height: 1.3; }
+    .card-text { font-size: 1.18rem; line-height: 1.6; color: var(--text-primary); }
+    .card-text strong { color: var(--text-chestnut); font-weight: 700; }
+    .card-muted { font-size: 1.08rem; line-height: 1.55; color: var(--text-muted); }
+    .kw { color: var(--accent-vermilion-dark); font-weight: 700; }
+
+    .bullet-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .bullet-item { display: flex; align-items: flex-start; gap: 11px; font-size: 1.16rem; line-height: 1.6; color: var(--text-primary); }
+    .bullet-mark {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--accent-gold-bg); color: var(--accent-gold-dark);
+      display: grid; place-items: center; flex-shrink: 0; margin-top: 4px;
+    }
+    .bullet-mark.vermilion { background: var(--accent-vermilion-bg); color: var(--accent-vermilion); }
+    .bullet-mark.moss { background: var(--accent-moss-bg); color: var(--accent-moss); }
+    .bullet-mark svg { width: 13px; height: 13px; }
+
+    /* PHOTO CARD & GALLERY TILES (FULL-HEIGHT STRETCH, MIN-HEIGHT 420px, 16px RADIUS) */
+    .photo-card {
+      background: var(--glass-card); border: 1.5px solid var(--border-warm);
+      border-radius: 20px; padding: 12px; box-shadow: var(--shadow-photo);
+      display: flex; flex-direction: column; gap: 9px; height: 100%; min-height: 0;
+    }
+    .photo-frame {
+      flex: 1; min-height: 420px; width: 100%; height: 100%; border-radius: var(--radius-photo);
+      overflow: hidden; background: var(--bg-sand-deep); position: relative;
+      border: 1px solid rgba(42, 26, 10, 0.08);
+    }
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-badge {
+      position: absolute; top: 12px; left: 12px; padding: 5px 12px;
+      border-radius: var(--radius-pill); background: rgba(42, 26, 10, 0.84);
+      backdrop-filter: blur(6px); color: #FDFBF7; font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .photo-caption {
+      font-size: 0.92rem; line-height: 1.4; color: var(--text-muted); font-weight: 600;
+      display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 4px;
+    }
+    .photo-caption .source { color: var(--accent-gold-dark); font-weight: 700; white-space: nowrap; }
+    .compact-photo .photo-frame { min-height: 300px; }
+
+    /* INTERACTIVE STEPPER (POWERPOINT SUB-STEP + DIRECT CARD CLICK + SYNCED PHOTO) */
+    .stepper-layout {
+      display: grid;
+      grid-template-columns: 45% 1fr;
+      gap: 24px;
+      flex: 1;
+      min-height: 0;
+      align-items: stretch;
+    }
+    .stepper-layout.ratio-50-50 {
+      grid-template-columns: 1fr 1fr;
+    }
+    .stepper-col {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .stepper-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      flex: 1;
+      justify-content: center;
+      min-height: 0;
+    }
+    .stepper-card {
+      width: 100%;
+      text-align: left;
+      background: var(--glass-soft);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 13px 16px;
+      box-shadow: 0 4px 12px -6px rgba(42, 26, 10, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      opacity: 0.84;
+      transition: border-color 200ms var(--ease), background-color 200ms var(--ease), opacity 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .stepper-card:hover {
+      opacity: 1;
+      border-color: var(--accent-gold);
+      background: #FFFFFF;
+    }
+    .stepper-card.active {
+      opacity: 1;
+      background: #FFFDF8;
+      border: 2.5px solid var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(212, 154, 61, 0.20), var(--shadow-card);
+    }
+    .stepper-card-tag {
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent-gold-dark);
+    }
+    .stepper-card.active .stepper-card-tag {
+      color: var(--accent-vermilion);
+    }
+    .stepper-card-title {
+      font-size: 1.24rem;
+      font-weight: 800;
+      color: var(--text-chestnut);
+      line-height: 1.28;
+    }
+    .stepper-card-desc {
+      font-size: 1.08rem;
+      line-height: 1.54;
+      color: var(--text-primary);
+    }
+    .stepper-media-stage {
+      position: relative;
+      height: 100%;
+      min-height: 0;
+    }
+    .stepper-media-item {
+      display: none;
+      height: 100%;
+      animation: tabFade 260ms var(--ease);
+    }
+    .stepper-media-item.active {
+      display: block;
+    }
+
+    /* LAYOUT GRIDS */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; flex: 1; min-height: 0; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; flex: 1; min-height: 0; }
+    .split-50-50 { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; flex: 1; min-height: 0; align-items: stretch; }
+    .split-55-45 { display: grid; grid-template-columns: 1.18fr 1fr; gap: 26px; flex: 1; min-height: 0; align-items: stretch; }
+    .split-45-55 { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 26px; flex: 1; min-height: 0; align-items: stretch; }
+    .split-65-35 { display: grid; grid-template-columns: 65% 1fr; gap: 26px; flex: 1; min-height: 0; align-items: center; }
+    .stack { display: flex; flex-direction: column; gap: 15px; justify-content: center; min-height: 0; }
+
+    /* HERO & CHIPS */
+    .hero-title { font-size: 3.1rem; line-height: 1.12; font-weight: 800; color: var(--text-chestnut); text-transform: uppercase; letter-spacing: -0.02em; margin: 14px 0 14px; }
+    .hero-title span { color: var(--accent-vermilion); }
+    .hero-lead { font-size: 1.25rem; line-height: 1.6; color: var(--text-muted); font-weight: 500; margin-bottom: 22px; }
+    .team-chip-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 9px; }
+    .chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: var(--radius-pill); font-size: 0.9rem; font-weight: 700; }
+    .chip.sand { background: var(--bg-sand); color: var(--text-chestnut); border: 1px solid var(--border-subtle); }
+    .chip.gold { background: var(--accent-gold-bg); color: var(--accent-gold-dark); border: 1px solid rgba(212, 154, 61, 0.45); }
+    .chip.vermilion { background: var(--accent-vermilion-bg); color: var(--accent-vermilion-dark); border: 1px solid rgba(184, 58, 44, 0.25); }
+    .chip.moss { background: var(--accent-moss-bg); color: var(--accent-moss); border: 1px solid rgba(62, 86, 56, 0.25); }
+
+    /* SLIDE 2: VERTICAL 9:16 TEAM VIDEO + 6 MEMBERS */
+    .team-video-grid { display: grid; grid-template-columns: 360px 1fr; gap: 28px; flex: 1; min-height: 0; align-items: center; }
+    .video-vertical-stage { display: flex; align-items: center; justify-content: center; height: 100%; }
+    .video-vertical-frame {
+      height: 580px; width: 326px; aspect-ratio: 9 / 16;
+      border-radius: var(--radius-video);
+      background: linear-gradient(155deg, #2A1A0A 0%, #3F2712 58%, #211408 100%);
+      box-shadow: var(--glow-gold); position: relative; overflow: hidden;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 24px 20px; text-align: center; color: #FDFBF7;
+    }
+    .video-vertical-frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 15px; z-index: 3; background: #1A1A1A; }
+    .video-ratio-tag {
+      position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+      padding: 5px 14px; border-radius: var(--radius-pill);
+      background: rgba(212, 154, 61, 0.22); border: 1px solid rgba(212, 154, 61, 0.65);
+      color: #F4C86C; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; white-space: nowrap; z-index: 2;
+    }
+    .video-play-ring {
+      width: 66px; height: 66px; border-radius: 50%;
+      background: rgba(212, 154, 61, 0.22); border: 2px solid var(--accent-gold);
+      color: #F4C86C; display: grid; place-items: center; margin-bottom: 18px; z-index: 2;
+    }
+    .video-placeholder-text { font-size: 1.02rem; font-weight: 700; line-height: 1.56; color: #FDFBF7; z-index: 2; }
+    .video-placeholder-sub { margin-top: 14px; font-size: 0.88rem; line-height: 1.45; color: #E7D6BE; z-index: 2; }
+
+    .members-bento-card {
+      background: var(--glass-card); backdrop-filter: blur(10px);
+      border: 1.5px solid var(--border-subtle); border-radius: 18px;
+      padding: 22px 24px; box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; justify-content: space-between; gap: 11px; height: 580px;
+    }
+    .member-row {
+      display: flex; align-items: center; gap: 14px; padding: 12px 16px;
+      border-radius: 12px; background: rgba(245, 239, 235, 0.78);
+      border: 1px solid rgba(212, 154, 61, 0.24);
+    }
+    .member-num {
+      width: 32px; height: 32px; border-radius: 9px; background: var(--accent-vermilion);
+      color: #FDFBF7; font-size: 0.95rem; font-weight: 800; display: grid; place-items: center; flex-shrink: 0;
+    }
+    .member-num.gold { background: var(--accent-gold); color: #2A1A0A; }
+    .member-info { font-size: 1.14rem; line-height: 1.45; color: var(--text-primary); }
+    .member-info strong { color: var(--text-chestnut); font-weight: 800; }
+
+    /* INTERACTIVE TAB SWITCHER (SLIDES 10 & 22) */
+    .tab-switcher-wrap { display: flex; flex-direction: column; gap: 16px; flex: 1; min-height: 0; }
+    .tab-bar {
+      display: inline-flex; align-self: flex-start; gap: 6px; padding: 6px;
+      background: var(--bg-sand-deep); border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+    }
+    .tab-btn {
+      min-height: 46px; padding: 9px 20px; border-radius: 10px;
+      font-size: 1.05rem; font-weight: 700; color: var(--text-muted);
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background-color 200ms var(--ease), color 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .tab-btn:hover { color: var(--text-chestnut); background: rgba(255, 255, 255, 0.55); }
+    .tab-btn.active {
+      background: var(--text-chestnut); color: #FDFBF7;
+      box-shadow: 0 6px 16px -6px rgba(42, 26, 10, 0.35);
+    }
+    .tab-panel { display: none; flex: 1; min-height: 0; animation: tabFade 240ms var(--ease); }
+    .tab-panel.active { display: grid; grid-template-columns: 1fr 1.05fr; gap: 24px; align-items: stretch; }
+    @keyframes tabFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* SLIDE 3: BALANCED BENTO GRID (3 EQUAL-HEIGHT REASON CARDS + HERITAGE PHOTO) & CONTINUOUS 5-STAGE TIMELINE */
+    .slide3-upper {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 24px;
+      flex: 1;
+      min-height: 0;
+      align-items: stretch;
+    }
+    .slide3-upper .photo-frame {
+      min-height: 0;
+      height: 100%;
+      border-radius: 16px;
+    }
+    .reason-grid {
+      display: grid;
+      grid-template-rows: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      height: 100%;
+      min-height: 0;
+    }
+    .reason-card {
+      background: linear-gradient(155deg, #FFFFFF 0%, #FAF5EE 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 10px 26px -12px rgba(42, 26, 10, 0.14), 0 2px 6px rgba(42, 26, 10, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 0;
+    }
+    .reason-card.accent-vermilion { border-left: 5px solid var(--accent-vermilion); }
+    .reason-card.accent-gold { border-left: 5px solid var(--accent-gold); }
+    .reason-card.accent-moss { border-left: 5px solid var(--accent-moss); }
+    .reason-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .reason-icon.vermilion { background: var(--accent-vermilion-bg); color: var(--accent-vermilion); border: 1px solid rgba(184, 58, 44, 0.22); }
+    .reason-icon.gold { background: var(--accent-gold-bg); color: var(--accent-gold-dark); border: 1px solid rgba(212, 154, 61, 0.36); }
+    .reason-icon.moss { background: var(--accent-moss-bg); color: var(--accent-moss); border: 1px solid rgba(62, 86, 56, 0.24); }
+    .reason-icon svg { width: 24px; height: 24px; }
+    .reason-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .reason-card-title { font-size: 1.24rem; font-weight: 800; color: var(--text-chestnut); line-height: 1.25; }
+    .reason-card-desc { font-size: 1.08rem; line-height: 1.5; color: var(--text-primary); }
+
+    /* CONTINUOUS 5-STAGE PROCESS STEPPER TIMELINE */
+    .roadmap-timeline {
+      margin-top: 18px;
+      margin-bottom: 10px;
+      padding: 14px 20px;
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .timeline-step {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 7px 10px;
+      border-radius: 10px;
+      text-align: left;
+      transition: background-color 180ms var(--ease), transform 180ms var(--ease);
+    }
+    .timeline-step:hover {
+      background: var(--bg-sand);
+      transform: translateY(-1px);
+    }
+    .timeline-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 0.92rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 10px -4px rgba(42, 26, 10, 0.28);
+    }
+    .timeline-num.vermilion { background: var(--accent-vermilion); color: #FDFBF7; }
+    .timeline-num.gold { background: var(--accent-gold); color: #2A1A0A; }
+    .timeline-meta { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+    .timeline-kicker { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent-vermilion); }
+    .timeline-step.tone-gold .timeline-kicker { color: var(--accent-gold-dark); }
+    .timeline-step-title { font-size: 0.98rem; font-weight: 800; color: var(--text-chestnut); line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .timeline-step-range { font-size: 0.78rem; font-weight: 600; color: var(--text-subtle); }
+    .timeline-connector {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      width: 28px;
+      color: var(--accent-gold-dark);
+    }
+    .timeline-connector::before {
+      content: "";
+      flex: 1;
+      height: 2px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--accent-vermilion), var(--accent-gold));
+    }
+    .timeline-connector svg { width: 14px; height: 14px; margin-left: -4px; flex-shrink: 0; }
+
+    .verse-box { background: var(--glass-card); border: 1px solid var(--border-subtle); border-left: 6px solid var(--accent-gold); border-radius: 18px; padding: 22px 24px; box-shadow: var(--shadow-card); display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+    .verse-box.vermilion { border-left-color: var(--accent-vermilion); }
+    .verse-quote { font-size: 21px; font-weight: 700; font-style: italic; color: var(--text-chestnut); line-height: 1.42; }
+
+    /* SLIDE 21 MINI QUIZ */
+    .quiz-wrap { display: flex; flex-direction: column; gap: 15px; flex: 1; justify-content: center; }
+    .quiz-prompt-card {
+      background: linear-gradient(135deg, #2A1A0A 0%, #442A13 100%);
+      border: 1.5px solid rgba(212, 154, 61, 0.55); border-radius: 18px;
+      padding: 20px 26px; color: #FDFBF7; display: flex; align-items: center; gap: 18px; box-shadow: var(--shadow-card);
+    }
+    .quiz-badge-icon {
+      width: 50px; height: 50px; border-radius: 14px; background: rgba(212, 154, 61, 0.22);
+      border: 1.5px solid var(--accent-gold); color: #F4C86C; display: grid; place-items: center; flex-shrink: 0;
+    }
+    .quiz-prompt-text { font-size: 1.5rem; font-weight: 700; line-height: 1.38; }
+    .quiz-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .quiz-btn {
+      min-height: 84px; background: var(--glass-card); border: 2px solid var(--border-subtle);
+      border-radius: 16px; padding: 16px 20px; display: flex; align-items: center; gap: 15px;
+      text-align: left; box-shadow: var(--shadow-card);
+      transition: border-color 200ms var(--ease), background-color 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .quiz-btn:hover { border-color: var(--accent-gold); background: #FFFFFF; }
+    .quiz-letter {
+      width: 42px; height: 42px; border-radius: 11px; background: var(--bg-sand);
+      color: var(--text-chestnut); font-size: 1.1rem; font-weight: 800; display: grid; place-items: center; flex-shrink: 0;
+    }
+    .quiz-label { font-size: 1.18rem; font-weight: 600; color: var(--text-primary); line-height: 1.38; }
+    .quiz-btn.correct {
+      background: #FFF9EB; border: 3px solid var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(212, 154, 61, 0.24), var(--shadow-card);
+    }
+    .quiz-btn.correct .quiz-letter { background: var(--accent-gold); color: #2A1A0A; }
+    .quiz-btn.wrong { background: var(--accent-vermilion-bg); border-color: var(--accent-vermilion); opacity: 0.84; }
+    .quiz-btn.wrong .quiz-letter { background: var(--accent-vermilion); color: #FDFBF7; }
+
+    /* Smooth accordion reveal for Quiz Feedback & Q&A */
+    .quiz-feedback-shell {
+      display: grid; grid-template-rows: 1fr; transition: grid-template-rows 260ms var(--ease);
+    }
+    .quiz-feedback {
+      background: var(--accent-gold-bg); border: 1.5px solid var(--accent-gold);
+      border-radius: 14px; padding: 14px 20px; display: flex; align-items: center;
+      justify-content: space-between; gap: 14px; min-height: 66px;
+    }
+
+    /* SLIDE 28–29 SMOOTH SLIDING ACCORDION */
+    .qa-stack { display: flex; flex-direction: column; gap: 14px; flex: 1; justify-content: center; }
+    .qa-item {
+      background: var(--glass-card); border: 1.5px solid var(--border-subtle);
+      border-radius: 16px; box-shadow: var(--shadow-card); overflow: hidden;
+      transition: border-color 200ms var(--ease);
+    }
+    .qa-item.open { border-color: var(--accent-vermilion); }
+    .qa-head-btn {
+      width: 100%; padding: 15px 20px; display: flex; align-items: center;
+      justify-content: space-between; gap: 14px; text-align: left;
+      transition: background-color 180ms var(--ease);
+    }
+    .qa-head-btn:hover { background: rgba(245, 239, 235, 0.65); }
+    .qa-tag {
+      padding: 5px 10px; border-radius: 8px; background: var(--accent-vermilion-bg);
+      color: var(--accent-vermilion-dark); font-size: 12px; font-weight: 800; white-space: nowrap; flex-shrink: 0;
+    }
+    .qa-q { font-size: 1.2rem; font-weight: 700; color: var(--text-chestnut); line-height: 1.42; }
+    .qa-arrow {
+      width: 38px; height: 38px; border-radius: 50%; background: var(--bg-sand);
+      color: var(--text-chestnut); display: grid; place-items: center; flex-shrink: 0;
+      transition: transform 240ms var(--ease), background-color 200ms var(--ease), color 200ms var(--ease);
+    }
+    .qa-item.open .qa-arrow { transform: rotate(180deg); background: var(--accent-vermilion); color: #FDFBF7; }
+
+    .qa-body-outer {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 340ms var(--ease), opacity 260ms var(--ease);
+    }
+    .qa-item.open .qa-body-outer {
+      max-height: 460px;
+      opacity: 1;
+    }
+    .qa-body-inner { overflow: hidden; }
+    .qa-answer-box {
+      padding: 15px 22px 20px; border-top: 1px dashed var(--border-strong);
+      background: rgba(252, 244, 228, 0.50); font-size: 1.14rem; line-height: 1.62; color: var(--text-primary);
+    }
+    .qa-speaker-tag {
+      display: inline-block; font-size: 0.85rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--accent-gold-dark); margin-bottom: 6px;
+    }
+
+    .btn-secondary {
+      min-height: 38px; padding: 7px 14px; border-radius: 10px;
+      background: var(--bg-sand); border: 1px solid var(--border-strong);
+      color: var(--text-chestnut); font-size: 13px; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: background-color 180ms var(--ease), border-color 180ms var(--ease);
+    }
+    .btn-secondary:hover { background: #E9DEC9; border-color: var(--accent-gold); }
+
+    /* ULTRA-SLIM EDGE PROGRESS HAIRLINE (0px LAYOUT FOOTPRINT) */
+    .edge-progress {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 4px;
+      background: rgba(212, 195, 176, 0.35);
+      cursor: pointer;
+      z-index: 35;
+      transition: height 180ms var(--ease);
+    }
+    .edge-progress:hover { height: 7px; }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-vermilion), var(--accent-gold));
+      transition: width 260ms var(--ease);
+    }
+
+    /* FULLSCREEN MODE (:fullscreen & F11 / TRÌNH CHIẾU):
+       KEEP HEADER VISIBLE • EXPAND SLIDE TO 96vw x 92vh • +15-20% TEXT • MIN-HEIGHT 500px PHOTOS */
+    :fullscreen .top-bar,
+    body.is-fullscreen .top-bar {
+      display: flex;
+      height: 50px;
+      background: rgba(253, 251, 247, 0.90);
+    }
+    :fullscreen .stage-wrapper,
+    body.is-fullscreen .stage-wrapper {
+      padding: 6px 10px 8px;
+    }
+    :fullscreen .slide-viewport,
+    body.is-fullscreen .slide-viewport {
+      width: 96vw;
+      height: 92vh;
+      max-height: calc(100vh - 60px);
+    }
+    :fullscreen .slide-content,
+    body.is-fullscreen .slide-content {
+      padding: 32px 50px 24px;
+    }
+    :fullscreen .slide-title,
+    body.is-fullscreen .slide-title { font-size: 2.72rem; }
+    :fullscreen .slide-subtitle,
+    body.is-fullscreen .slide-subtitle { font-size: 1.35rem; }
+    :fullscreen .tag-pill,
+    :fullscreen .slide-index-tag,
+    body.is-fullscreen .tag-pill,
+    body.is-fullscreen .slide-index-tag { font-size: 1.22rem; }
+    :fullscreen .card-title,
+    body.is-fullscreen .card-title { font-size: 1.54rem; }
+    :fullscreen .card-text,
+    body.is-fullscreen .card-text { font-size: 1.38rem; line-height: 1.62; }
+    :fullscreen .card-muted,
+    body.is-fullscreen .card-muted { font-size: 1.24rem; }
+    :fullscreen .bullet-item,
+    body.is-fullscreen .bullet-item { font-size: 1.35rem; line-height: 1.62; }
+    :fullscreen .hero-title,
+    body.is-fullscreen .hero-title { font-size: 3.65rem; }
+    :fullscreen .hero-lead,
+    body.is-fullscreen .hero-lead { font-size: 1.46rem; }
+    :fullscreen .stepper-card-tag,
+    body.is-fullscreen .stepper-card-tag { font-size: 1.06rem; }
+    :fullscreen .stepper-card-title,
+    body.is-fullscreen .stepper-card-title { font-size: 1.44rem; }
+    :fullscreen .stepper-card-desc,
+    body.is-fullscreen .stepper-card-desc { font-size: 1.26rem; line-height: 1.56; }
+    :fullscreen .qa-q,
+    body.is-fullscreen .qa-q { font-size: 1.4rem; }
+    :fullscreen .qa-answer-box,
+    body.is-fullscreen .qa-answer-box { font-size: 1.34rem; line-height: 1.64; }
+    :fullscreen .quiz-prompt-text,
+    body.is-fullscreen .quiz-prompt-text { font-size: 1.75rem; }
+    :fullscreen .quiz-label,
+    body.is-fullscreen .quiz-label { font-size: 1.38rem; }
+    :fullscreen .member-info,
+    body.is-fullscreen .member-info { font-size: 1.32rem; }
+    :fullscreen .video-vertical-frame,
+    body.is-fullscreen .video-vertical-frame { height: 640px; width: 360px; }
+    :fullscreen .members-bento-card,
+    body.is-fullscreen .members-bento-card { height: 640px; }
+    :fullscreen .photo-frame,
+    body.is-fullscreen .photo-frame { height: 100%; min-height: 500px; }
+    :fullscreen .slide3-upper .photo-frame,
+    body.is-fullscreen .slide3-upper .photo-frame { min-height: 0; height: 100%; }
+    :fullscreen .reason-card-title,
+    body.is-fullscreen .reason-card-title { font-size: 1.44rem; }
+    :fullscreen .reason-card-desc,
+    body.is-fullscreen .reason-card-desc { font-size: 1.24rem; line-height: 1.54; }
+    :fullscreen .timeline-step-title,
+    body.is-fullscreen .timeline-step-title { font-size: 1.12rem; }
+    :fullscreen .timeline-step-range,
+    body.is-fullscreen .timeline-step-range { font-size: 0.88rem; }
+    :fullscreen .compact-photo .photo-frame,
+    body.is-fullscreen .compact-photo .photo-frame { min-height: 360px; }
+    :fullscreen .photo-frame img,
+    body.is-fullscreen .photo-frame img { height: 100%; width: 100%; object-fit: cover; }
+    :fullscreen .photo-caption,
+    body.is-fullscreen .photo-caption { font-size: 1.06rem; }
+    :fullscreen .slide-footer-bar,
+    body.is-fullscreen .slide-footer-bar { font-size: 15px; height: 40px; }
+
+    .notes-drawer {
+      position: fixed; left: 20px; right: 20px; bottom: 18px; max-width: 980px; margin: 0 auto;
+      background: rgba(253, 251, 247, 0.98); border: 1.5px solid var(--border-strong);
+      border-radius: 18px; box-shadow: var(--shadow-stage); padding: 16px 22px; z-index: 40;
+      display: none; flex-direction: column; gap: 10px;
+    }
+    .notes-drawer.open { display: flex; }
+    .notes-body-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: 18px; max-height: 190px; overflow-y: auto; }
+    .notes-box { background: var(--bg-sand); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 12px 14px; font-size: 13.5px; line-height: 1.52; color: var(--text-muted); }
+    .notes-box strong { display: block; color: var(--text-chestnut); margin-bottom: 4px; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .modal-backdrop {
+      position: fixed; inset: 0; background: rgba(26, 16, 8, 0.56); backdrop-filter: blur(4px);
+      z-index: 50; display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-panel {
+      width: 100%; max-width: 1100px; max-height: 86vh; background: var(--bg-pearl);
+      border: 1px solid var(--border-subtle); border-radius: 22px; box-shadow: var(--shadow-stage);
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .modal-header { padding: 16px 22px; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; }
+    .overview-grid { padding: 18px 22px; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); gap: 12px; }
+    .thumb-card {
+      background: #FFFFFF; border: 1.5px solid var(--border-subtle); border-radius: 13px;
+      padding: 13px 15px; text-align: left; display: flex; flex-direction: column; gap: 5px;
+      transition: border-color 180ms var(--ease), background-color 180ms var(--ease);
+    }
+    .thumb-card:hover { border-color: var(--accent-gold); background: #FFFDF8; }
+    .thumb-card.active { border-color: var(--accent-vermilion); background: var(--accent-vermilion-bg); }
+    .script-sheet { padding: 20px 26px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+    .script-entry { background: #FFFFFF; border: 1px solid var(--border-subtle); border-left: 4px solid var(--accent-gold); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+
+    @media (max-width: 960px) { .icon-btn:not(.btn-present) .btn-label { display: none; } .notes-body-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 560px) {
+      .top-bar { padding: 0 10px; }
+      .brand-title { display: none; }
+      .stage-wrapper { padding: 4px 10px 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+    @media print {
+      @page { size: 1440px 810px; margin: 0; }
+      body { background: #FDFBF7 !important; overflow: visible !important; }
+      .top-bar, .edge-progress, .notes-drawer, .modal-backdrop { display: none !important; }
+      .stage-wrapper { padding: 0 !important; display: block !important; overflow: visible !important; }
+      .slide-frame { transform: none !important; box-shadow: none !important; border: none !important; border-radius: 0 !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-bar" role="banner">
+    <div class="top-left">
+      <div class="brand-pill">
+        <div class="brand-dot" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L4 7v2h16V7l-8-5z" /><path d="M6 9v9M18 9v9M3 18h18M10 18v-5h4v5" />
+          </svg>
+        </div>
+        <span class="brand-title">Lễ hội Mục đồng làng Phong Lệ</span>
+      </div>
+
+      <button type="button" class="icon-btn" id="btnNotes" aria-label="Bật hoặc tắt lời dẫn thuyết trình (Phím N)" aria-pressed="false" title="Lời dẫn & Visual (N)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2" /><line x1="12" y1="19" x2="12" y2="23" /><line x1="8" y1="23" x2="16" y2="23" />
+        </svg>
+        <span class="btn-label">Lời dẫn (N)</span>
+      </button>
+
+      <button type="button" class="icon-btn" id="btnScript" aria-label="Xem kịch bản biên soạn đầy đủ 31 slide (Phím S)" title="Kịch bản 31 Slide (S)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
+        </svg>
+        <span class="btn-label">Kịch bản (S)</span>
+      </button>
+    </div>
+
+    <div class="top-right">
+      <button type="button" class="icon-btn" id="btnOverview" aria-label="Mục lục 31 slide (Phím G)" title="31 Slide (G)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" />
+          <rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" />
+        </svg>
+        <span class="btn-label">31 Slide (G)</span>
+      </button>
+
+      <button type="button" class="icon-btn btn-present" id="btnFullscreen" aria-label="Trình chiếu toàn màn hình (Phím F)" title="Trình chiếu toàn màn hình (F / F11)">
+        <svg id="fullscreenIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" />
+          <line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
+        </svg>
+        <span class="btn-label" id="fullscreenLabel">Trình chiếu</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="stage-wrapper" id="stageWrapper">
+    <div class="slide-viewport">
+      <article class="slide-frame" id="slideFrame" aria-live="polite" aria-atomic="true">
+        <div class="slide-content" id="slideContent"></div>
+        <footer class="slide-footer-bar">
+          <span>Lễ hội Mục đồng làng Phong Lệ (Đà Nẵng) • Nhóm 4</span>
+          <span class="slide-num-badge" id="slideFooterCounter">SLIDE 01 / 31</span>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <div class="edge-progress" id="progressTrack" role="slider" aria-label="Tiến độ trình chiếu 31 slide" aria-valuemin="1" aria-valuemax="31" aria-valuenow="1" tabindex="0">
+    <div class="progress-fill" id="progressFill" style="width:3.22%;"></div>
+  </div>
+
+  <aside class="notes-drawer" id="notesDrawer" aria-label="Lời thuyết minh và mô tả bố cục thị giác">
+    <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border-subtle);padding-bottom:8px;">
+      <strong style="font-size:13px;text-transform:uppercase;letter-spacing:0.05em;color:var(--accent-vermilion);">Speaker Notes &amp; Visual Tương tác</strong>
+      <button type="button" class="icon-btn" id="btnCloseNotes" aria-label="Đóng bảng lời dẫn" style="height:34px;min-width:34px;padding:0;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+      </button>
+    </div>
+    <div class="notes-body-grid">
+      <div style="font-size:15px;line-height:1.62;color:var(--text-primary);" id="notesText"></div>
+      <div class="notes-box">
+        <strong>Visual &amp; Chế độ tương tác</strong>
+        <div id="notesLayout"></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="modal-backdrop" id="overviewModal" role="dialog" aria-modal="true" aria-labelledby="overviewTitle">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2 style="font-size:18px;font-weight:800;color:var(--text-chestnut);" id="overviewTitle">Mục lục toàn bộ 31 Slide</h2>
+        <button type="button" class="icon-btn" id="btnCloseOverview" aria-label="Đóng mục lục">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+        </button>
+      </div>
+      <div class="overview-grid" id="overviewGrid"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="scriptModal" role="dialog" aria-modal="true" aria-labelledby="scriptTitle">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2 style="font-size:18px;font-weight:800;color:var(--text-chestnut);" id="scriptTitle">Kịch bản chi tiết 31 Slide (Số &amp; Tên • Visual &amp; Tương tác • Nội dung • Speaker Notes)</h2>
+        <button type="button" class="icon-btn" id="btnCloseScript" aria-label="Đóng bảng kịch bản">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+        </button>
+      </div>
+      <div class="script-sheet" id="scriptSheet"></div>
+    </div>
+  </div>
+
+  <script>
+    /* =========================================================================
+       CURATED NON-REPEATING REAL PHOTOGRAPHY LIBRARY (VERIFIED LIVE PRESS PHOTOS)
+       ========================================================================= */
+    const MEDIA = {
+      ruocKieu: './assets/images/ruoc-kieu.jpg',
+      langCo: './assets/images/lang-co.jpg',
+      dinhLangCo: './assets/images/dinh-lang-co.jpg',
+      conThan: './assets/images/con-than.jpg',
+      tangDaTrang: './assets/images/tang-da-trang.jpg',
+      canhDong: './assets/images/canh-dong.jpg',
+      doiRuoc: './assets/images/doi-ruoc.jpg',
+      ruocCoLan: './assets/images/ruoc-co-lan.jpg',
+      doiBatAm: './assets/images/doi-bat-am.jpg',
+      hoTongDanLang: './assets/images/ho-tong-dan-lang.jpg',
+      anViConThan: './assets/images/an-vi-con-than.jpg',
+      khanNguyenChanhBai: './assets/images/khan-nguyen-chanh-bai.jpg',
+      muaThuanGioHoa: './assets/images/mua-thuan-gio-hoa.jpg',
+      treEmDuLe: './assets/images/tre-em-du-le.jpg',
+      hoiKieuDenTho: './assets/images/hoi-kieu-den-tho.jpg',
+      mucDongChanTrau: './assets/images/muc-dong-chan-trau.jpg',
+      chanhBaiPortrait: './assets/images/chanh-bai-portrait.jpg',
+      phucTrangPrimary: './assets/images/phuc-trang-fallback.jpg',
+      phucTrangFallback: './assets/images/phuc-trang-fallback.jpg',
+      demTucTruc: './assets/images/dem-tuc-truc.jpg',
+      daiTeConThan: './assets/images/dai-te-con-than.jpg',
+      phanHoiTreEm: './assets/images/phan-hoi-tre-em.jpg',
+      phanHoiCongDong: './assets/images/phan-hoi-cong-dong.jpg',
+      mamCoLe: './assets/images/mam-co-le.jpg',
+      boLaoTeThan: './assets/images/bo-lao-te-than.jpg',
+      danChuLangXa: './assets/images/dan-chu-lang-xa.jpg',
+      coKetCongDong: './assets/images/co-ket-cong-dong.jpg',
+      doThiHoaCau: './assets/images/do-thi-hoa-cau.jpg',
+      baoTonSong: './assets/images/bao-ton-song.jpg',
+      duLichSinhThai: './assets/images/du-lich-sinh-thai.jpg',
+      tongKetToanCanh: './assets/images/tong-ket-toan-canh.jpg',
+      lyDoAnh: './assets/images/ly-do-anh.jpg',
+      nuCuoiKet: './assets/images/nu-cuoi-ket.jpg',
+      vnaArticle: 'https://nvsk.vnanet.vn/doc-dao-le-hoi-muc-dong-lang-phong-le-tai-da-nang-1-145875.vna',
+      nhanDanArticle: 'https://nhandan.vn/le-hoi-muc-dong-net-van-hoa-doc-dao-cua-lang-que-phong-le-post808333.html'
+    };
+
+    const ICONS = {
+      spark: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 6.2L20 12l-5.8 2.8L12 21l-2.2-6.2L4 12l5.8-2.8L12 3z"/></svg>',
+      compass: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>',
+      mapPin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+      landmark: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><polygon points="12 2 20 7 4 7"/></svg>',
+      sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>',
+      calendar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
+      award: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>',
+      users: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+      shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+      heart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+      leaf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>',
+      music: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>',
+      flag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>',
+      book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+      flame: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
+      alert: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+      check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
+      crown: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20l-2-11-5 4-3-6-3 6-5-4-2 11z"/><path d="M4 21h16"/></svg>',
+      play: '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>',
+      help: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+      chevronDown: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>',
+      utensils: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>',
+      wind: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>',
+      moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+      target: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'
+    };
+
+    function headerHTML(tag, slideNum, title, subtitle = '', tone = 'vermilion') {
+      const currentNum = (typeof state !== 'undefined' && state && typeof state.currentIndex === 'number')
+        ? state.currentIndex + 1
+        : slideNum;
+      const totalSlides = (typeof SLIDES !== 'undefined' && Array.isArray(SLIDES)) ? SLIDES.length : 31;
+      return `
+        <header class="slide-header">
+          <div class="eyebrow-row">
+            <span class="tag-pill ${tone}">${tag}</span>
+            <span class="slide-index-tag">SLIDE ${String(currentNum).padStart(2, '0')} / ${String(totalSlides).padStart(2, '0')}</span>
+          </div>
+          <h1 class="slide-title">${title}</h1>
+          ${subtitle ? `<p class="slide-subtitle">${subtitle}</p>` : ''}
+        </header>`;
+    }
+
+    function bulletItem(html, tone = 'gold') {
+      return `<li class="bullet-item"><span class="bullet-mark ${tone}" aria-hidden="true">${ICONS.check}</span><span>${html}</span></li>`;
+    }
+
+    function photoCard(url, alt, caption, source, badge = '', fallbackUrl = '') {
+      const fallbackAttr = fallbackUrl
+        ? `onerror="if(!this.dataset.fb){this.dataset.fb='1';this.src='${fallbackUrl}';}"`
+        : `onerror="this.style.opacity='0.2';"`;
+      return `
+        <figure class="photo-card">
+          <div class="photo-frame">
+            <img src="${url}" alt="${alt}" loading="eager" referrerpolicy="no-referrer" ${fallbackAttr} />
+            ${badge ? `<span class="photo-badge">${badge}</span>` : ''}
+          </div>
+          <figcaption class="photo-caption">
+            <span>${caption}</span>
+            <span class="source">${source}</span>
+          </figcaption>
+        </figure>`;
+    }
+
+    function renderStepper(id, labelPrefix, steps, ratioClass = '') {
+      return `
+        <div class="stepper-layout ${ratioClass}" data-stepper="${id}">
+          <div class="stepper-col">
+            <div class="stepper-list" role="tablist" aria-label="${labelPrefix}">
+              ${steps.map((st, idx) => `
+                <button type="button" class="stepper-card ${idx === 0 ? 'active' : ''}" role="tab" aria-selected="${idx === 0 ? 'true' : 'false'}" data-step-index="${idx}">
+                  <span class="stepper-card-tag">${st.tag}</span>
+                  <span class="stepper-card-title">${st.title}</span>
+                  <span class="stepper-card-desc">${st.desc}</span>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+          <div class="stepper-media-stage">
+            ${steps.map((st, idx) => `
+              <div class="stepper-media-item ${idx === 0 ? 'active' : ''}" data-media-index="${idx}">
+                ${photoCard(st.photo, st.alt, st.caption, st.source, st.badge, st.fallback || '')}
+              </div>
+            `).join('')}
+          </div>
+        </div>`;
+    }
+
+    /* =========================================================================
+       30 SLIDES — ZERO HEX CODES IN VISIBLE TEXT • ZERO SELF-DRAWN MAPS
+       ========================================================================= */
+    const SLIDES = [
+      /* SLIDE 1 */
+      {
+        num: 1,
+        part: 'PHẦN 1 — Tổng quan & Giới thiệu nhóm',
+        title: 'LỄ HỘI MỤC ĐỒNG LÀNG PHONG LỆ (ĐÀ NẴNG)',
+        layoutDesc: 'Bố cục Bento 50/50: Cột trái đặt tiêu đề in hoa đậm và thẻ danh sách 6 thành viên; Cột phải 50% chèn ảnh thực tế đoàn rước cờ kiệu Thần Nông đi giữa cánh đồng (TTXVN) bo góc mềm kèm chú thích.',
+        bulletsSummary: [
+          'Di sản văn hóa phi vật thể độc bản tôn vinh tầng lớp trẻ chăn trâu (mục đồng) xứ Quảng.',
+          'Không gian lễ hội hơn 500 năm tuổi tại làng cổ Phong Lệ, TP. Đà Nẵng.',
+          'Nhóm thực hiện: Gia Bảo (Leader), Minh Đạt, Thanh Ngọc, Bảo Thy, Hoàng Long, Duy Khang.'
+        ],
+        speakerNotes: 'Kính chào thầy cô và các bạn. Hôm nay, Duy Khang cùng nhóm trưởng Gia Bảo và các cộng sự xin đưa cả lớp trở về xứ Quảng để chiêm ngưỡng một lễ hội có một không hai tại Việt Nam: Lễ hội Mục đồng làng Phong Lệ — nơi tuổi thơ trở thành chủ thể linh thiêng tối cao của nghi lễ.',
+        render: () => `
+          <div class="split-50-50" style="align-items:center;">
+            <div class="stack">
+              <div>
+                <span class="tag-pill vermilion">${ICONS.spark} DI SẢN VĂN HÓA PHI VẬT THỂ XỨ QUẢNG</span>
+                <h1 class="hero-title">LỄ HỘI <span>MỤC ĐỒNG</span><br/>LÀNG PHONG LỆ</h1>
+                <p class="hero-lead">Di sản văn hóa phi vật thể độc bản tôn vinh <strong>trẻ chăn trâu xứ Quảng</strong> — nơi tuổi thơ bước lên trung tâm thiêng liêng của nghi lễ tế Thần Nông tại Đà Nẵng.</p>
+              </div>
+              <div class="bento-card soft accent-gold" style="padding:16px 20px;">
+                <div style="font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-gold-dark);">Đội ngũ thực hiện • Nhóm 4 (6 thành viên)</div>
+                <div class="team-chip-strip">
+                  <span class="chip vermilion">Gia Bảo (Leader)</span>
+                  <span class="chip sand">Minh Đạt</span>
+                  <span class="chip sand">Thanh Ngọc</span>
+                  <span class="chip sand">Bảo Thy</span>
+                  <span class="chip sand">Hoàng Long</span>
+                  <span class="chip gold">Duy Khang (Presenter)</span>
+                </div>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.ruocKieu,
+              'Đoàn rước cờ kiệu Thần Nông đi giữa đồng lúa làng Phong Lệ tại Đà Nẵng',
+              'Đoàn rước kiệu Thần Nông rực rỡ cờ hoa băng qua làng cổ Phong Lệ',
+              'Ảnh: TTXVN',
+              'ẢNH TƯ LIỆU THỰC TẾ'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 2 */
+      {
+        num: 2,
+        part: 'PHẦN 1 — Tổng quan & Giới thiệu nhóm',
+        title: 'ĐỘI NGŨ THỰC HIỆN • NHÓM 4',
+        layoutDesc: 'Bố cục 2 cột rõ rệt: Bên trái khung video dọc chuẩn 9:16 (dạng TikTok/Reels) viền vàng rơm nhúng trực tiếp từ Google Drive; Bên phải là thẻ Card Box phân công 6 thành viên Nhóm 4.',
+        bulletsSummary: [
+          'Khung Video dọc 9:16 nhúng trực tiếp từ Google Drive giới thiệu 6 thành viên Nhóm 4.',
+          'Gia Bảo (Trưởng nhóm • Thiết kế Slide • Sản xuất), Minh Đạt (Tư liệu lịch sử & Cồn Thần), Thanh Ngọc (Nội dung & Kịch bản nghi lễ).',
+          'Bảo Thy (Kịch bản phần Hội & Quiz), Hoàng Long (Dữ liệu hình ảnh & Kỹ thuật), Duy Khang (Thuyết trình chính & Phản biện Q&A).'
+        ],
+        speakerNotes: 'Trước khi bước vào không gian lễ hội hơn 500 năm tuổi, Duy Khang mời thầy cô và các bạn theo dõi đoạn clip dọc ngắn để làm quen với từng gương mặt năng động của Nhóm 4 đứng sau dự án Lễ hội Mục đồng làng Phong Lệ!',
+        render: () => `
+          ${headerHTML('PHẦN 1 • GIỚI THIỆU ĐỘI NGŨ', 2, 'ĐỘI NGŨ THỰC HIỆN • NHÓM 4')}
+          <div class="team-video-grid">
+            <div class="video-vertical-stage">
+              <div class="video-drive-wrapper" style="position: relative; width: 100%; max-width: 300px; aspect-ratio: 9/16; margin: 0 auto; border-radius: 16px; overflow: hidden; border: 2px solid #D49A3D; box-shadow: 0 8px 24px rgba(0,0,0,0.12); background: #2A1A0A;">
+                <iframe
+                  src="https://drive.google.com/file/d/1qiWNIxz2ZlpjIE1PiyNnA4x7IBsrKErT/preview"
+                  title="Video giới thiệu thành viên Nhóm 4"
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+
+            <div class="members-bento-card">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <span style="font-size:13.5px;font-weight:800;text-transform:uppercase;letter-spacing:0.05em;color:var(--accent-vermilion);">Phân công vai trò 6 thành viên</span>
+                <span class="chip gold">NHÓM 4</span>
+              </div>
+              <div class="member-row"><span class="member-num">1</span><div class="member-info"><strong>Gia Bảo:</strong> Trưởng nhóm (Leader) • Thiết kế Slide • Phụ trách sản xuất.</div></div>
+              <div class="member-row"><span class="member-num gold">2</span><div class="member-info"><strong>Minh Đạt:</strong> Nghiên cứu tư liệu lịch sử &amp; Huyền tích cồn Thần.</div></div>
+              <div class="member-row"><span class="member-num">3</span><div class="member-info"><strong>Thanh Ngọc:</strong> Biên tập nội dung &amp; Kịch bản nghi lễ.</div></div>
+              <div class="member-row"><span class="member-num gold">4</span><div class="member-info"><strong>Bảo Thy:</strong> Biên tập kịch bản phần Hội &amp; Phụ trách tương tác Quiz.</div></div>
+              <div class="member-row"><span class="member-num">5</span><div class="member-info"><strong>Hoàng Long:</strong> Thu thập dữ liệu hình ảnh &amp; Hỗ trợ kỹ thuật.</div></div>
+              <div class="member-row"><span class="member-num gold">6</span><div class="member-info"><strong>Duy Khang:</strong> Thuyết trình viên chính &amp; Phản biện Q&amp;A.</div></div>
+            </div>
+          </div>`
+      },
+
+      /* SLIDE 3 (NEW) — PHIM TƯ LIỆU LỄ HỘI MỤC ĐỒNG */
+      {
+        num: 3,
+        part: 'PHẦN 1 — Tổng quan & Giới thiệu nhóm',
+        title: 'PHIM TƯ LIỆU • ĐẶC SẮC LỄ HỘI MỤC ĐỒNG LÀNG PHONG LỆ',
+        layoutDesc: 'Bố cục Split 65/35 cân đối: Cột trái (65%) nhúng trực tiếp phóng sự tư liệu 16:9 của Báo Đà Nẵng bo góc 16px viền vàng rơm; Cột phải (35%) gồm 2 thẻ tóm tắt Nguồn tư liệu và Thời lượng 2 phút.',
+        bulletsSummary: [
+          'Phóng sự thực địa chính thống của Báo Đà Nẵng ghi nhận lễ khai mạc tại xã Hòa Châu.',
+          'Thời lượng 2 phút: Toàn cảnh đoàn rước kiệu Thần Nông giữa đồng lúa và định hướng công nhận Di sản văn hóa phi vật thể Quốc gia.'
+        ],
+        speakerNotes: 'Để thầy cô và các bạn cảm nhận ngay âm thanh chiêng trống và sắc màu rực rỡ của ngày hội, mời cả lớp cùng xem đoạn phim tư liệu ngắn 2 phút do Báo Đà Nẵng ghi nhận trực tiếp tại làng Phong Lệ, xã Hòa Châu.',
+        render: () => `
+          ${headerHTML('PHẦN 1 • PHIM TƯ LIỆU THỰC ĐỊA', 3, 'PHIM TƯ LIỆU • ĐẶC SẮC LỄ HỘI MỤC ĐỒNG LÀNG PHONG LỆ', null, 'gold')}
+          <div class="split-65-35">
+            <div style="width:100%;">
+              <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; border: 2px solid #D49A3D; box-shadow: 0 10px 25px rgba(0,0,0,0.12); background: #2A1A0A;">
+                <iframe
+                  style="position: absolute; top:0; left: 0; width: 100%; height: 100%; border: 0;"
+                  src="https://www.youtube-nocookie.com/embed/ouf117ElPd0?rel=0"
+                  title="Đặc sắc lễ hội Mục Đồng làng Phong Lệ năm 2024 - Báo Đà Nẵng"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+            <div class="stack" style="gap: 18px;">
+              <div class="bento-card accent-vermilion">
+                <div class="card-head">
+                  <div class="card-icon vermilion">${ICONS.book}</div>
+                  <h2 class="card-title">Nguồn tư liệu</h2>
+                </div>
+                <p class="card-text">Phóng sự thực địa khai mạc lễ hội do <strong>Báo Đà Nẵng</strong> ghi nhận trực tiếp tại <strong>xã Hòa Châu</strong>, huyện Hòa Vang.</p>
+              </div>
+              <div class="bento-card accent-gold">
+                <div class="card-head">
+                  <div class="card-icon gold">${ICONS.play}</div>
+                  <h2 class="card-title">Thời lượng: 2 phút</h2>
+                </div>
+                <p class="card-text">Toàn cảnh đoàn rước <strong>kiệu Thần Nông</strong> đi giữa đồng lúa xanh tươi và định hướng đề nghị công nhận <strong>Di sản phi vật thể Quốc gia</strong>.</p>
+              </div>
+            </div>
+          </div>`
+      },
+
+      /* SLIDE 4 (FORMERLY SLIDE 3) */
+      {
+        num: 4,
+        part: 'PHẦN 1 — Tổng quan & Giới thiệu nhóm',
+        title: 'LÝ DO CHỌN ĐỀ TÀI & LỘ TRÌNH 5 CHẶNG',
+        layoutDesc: 'Bento Grid cân xứng 2 tầng: Tầng trên chia cột trái 3 thẻ Card vuông vức giãn đều theo chiều cao ảnh di sản đoàn rước Thần Nông bên phải (TTXVN); Tầng dưới là thanh tiến trình Timeline 5 chặng nối liền có mũi tên định hướng.',
+        bulletsSummary: [
+          'Độc bản hiếm hoi: Duy nhất tại Việt Nam tôn vinh trẻ chăn trâu.',
+          'Đảo ngược tôn ty: Trao quyền tối cao trong tế lễ cho con trẻ.',
+          'Tính cấp thiết bảo tồn: Nguy cơ mai một trước tốc độ đô thị hóa nhanh.',
+          'Lộ trình 5 chặng liên tục: Chặng 01 Khởi nguồn → Chặng 02 Không gian & Chủ thể → Chặng 03 Nghi thức Lễ → Chặng 04 Không khí Hội → Chặng 05 Giá trị & Bảo tồn.'
+        ],
+        speakerNotes: 'Lý do lớn nhất thôi thúc nhóm chọn đề tài này nằm ở tính độc bản không trùng lặp: giữa lễ giáo xưa vốn trọng lão, Phong Lệ lại trao quyền chủ tế cho trẻ chăn trâu. Mời thầy cô và các bạn cùng đi qua 5 chặng hành trình bên dưới.',
+        render: () => {
+          const arrowSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>';
+          const stages = [
+            { num: '01', title: 'Khởi nguồn', range: 'Slide 05 – 09', jump: 4, tone: 'vermilion' },
+            { num: '02', title: 'Không gian & Chủ thể', range: 'Slide 10 – 13', jump: 9, tone: 'gold' },
+            { num: '03', title: 'Nghi thức Lễ', range: 'Slide 14 – 18', jump: 13, tone: 'vermilion' },
+            { num: '04', title: 'Không khí Hội', range: 'Slide 19 – 22', jump: 18, tone: 'gold' },
+            { num: '05', title: 'Giá trị & Bảo tồn', range: 'Slide 23 – 31', jump: 22, tone: 'vermilion' }
+          ];
+          return `
+          ${headerHTML('PHẦN 1 • LÝ DO & BỐ CỤC', 4, 'LÝ DO CHỌN ĐỀ TÀI & LỘ TRÌNH 5 CHẶNG')}
+          <div class="slide3-upper">
+            <div class="reason-grid">
+              <div class="reason-card accent-vermilion">
+                <div class="reason-icon vermilion" aria-hidden="true">${ICONS.spark}</div>
+                <div class="reason-body">
+                  <h2 class="reason-card-title">Độc bản hiếm hoi</h2>
+                  <p class="reason-card-desc"><span class="kw">Duy nhất tại Việt Nam</span> tôn vinh trẻ chăn trâu (mục đồng) bằng một đại lễ riêng của cả cộng đồng làng xã.</p>
+                </div>
+              </div>
+              <div class="reason-card accent-gold">
+                <div class="reason-icon gold" aria-hidden="true">${ICONS.crown}</div>
+                <div class="reason-body">
+                  <h2 class="reason-card-title">Đảo ngược tôn ty</h2>
+                  <p class="reason-card-desc"><span class="kw">Trao quyền tối cao trong tế lễ cho con trẻ</span> — người lớn và bô lão thành kính đứng sau lắng nghe hiệu lệnh của Chánh bái nhí.</p>
+                </div>
+              </div>
+              <div class="reason-card accent-moss">
+                <div class="reason-icon moss" aria-hidden="true">${ICONS.shield}</div>
+                <div class="reason-body">
+                  <h2 class="reason-card-title">Tính cấp thiết bảo tồn</h2>
+                  <p class="reason-card-desc"><span class="kw">Nguy cơ mai một trước tốc độ đô thị hóa nhanh</span> đòi hỏi gìn giữ ký ức nông nghiệp và không gian lễ hội làng cổ Đà Nẵng.</p>
+                </div>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.ruocKieu,
+              'Đoàn rước cờ kiệu Thần Nông trong Lễ hội Mục đồng làng Phong Lệ tại Đà Nẵng',
+              'Đoàn rước kiệu Thần Nông rực rỡ cờ hoa băng qua làng cổ Phong Lệ',
+              'Ảnh: TTXVN',
+              'DI SẢN ĐỘC BẢN XỨ QUẢNG'
+            )}
+          </div>
+          <nav class="roadmap-timeline" aria-label="Lộ trình 5 chặng thuyết trình">
+            ${stages.map((st, i) => `
+              <button type="button" class="timeline-step tone-${st.tone}" data-jump-slide="${st.jump}" title="Đi tới Chặng ${st.num}: ${st.title}">
+                <span class="timeline-num ${st.tone}">${st.num}</span>
+                <span class="timeline-meta">
+                  <span class="timeline-kicker">CHẶNG ${st.num}</span>
+                  <span class="timeline-step-title">${st.title}</span>
+                  <span class="timeline-step-range">${st.range}</span>
+                </span>
+              </button>
+              ${i < stages.length - 1 ? `<span class="timeline-connector" aria-hidden="true">${arrowSvg}</span>` : ''}
+            `).join('')}
+          </nav>`;
+        }
+      },
+
+      /* SLIDE 4 — KHÔNG GIAN LÀNG CỔ PHONG LỆ (ẢNH CHỤP THẬT 2024-06.JPG) */
+      {
+        num: 4,
+        part: 'PHẦN 1 — Tổng quan & Giới thiệu nhóm',
+        title: 'KHÔNG GIAN LÀNG CỔ VEN SÔNG & ĐÌNH PHONG LỆ',
+        layoutDesc: 'Bento 50/50 không dùng bản đồ vector: Cột trái là 2 thẻ tọa độ địa lý ven sông Cẩm Lệ và bề dày hơn 500 năm; Cột phải chèn ảnh chụp thật không gian đình làng cổ Phong Lệ (Danang Fantasticity).',
+        bulletsSummary: [
+          'Vị trí địa lý: Nằm ven sông Cẩm Lệ, nay thuộc phường Hòa Thọ Đông (Q. Cẩm Lệ) và xã Hòa Châu (H. Hòa Vang), TP. Đà Nẵng.',
+          'Lịch sử hơn 500 năm tuổi: Ngôi làng cổ thuần nông, giàu truyền thống hiếu học xứ Quảng.',
+          'Bảo lưu cổng đình cổ kính và nhiều thuần phong mỹ tục truyền đời ven dòng sông Cẩm Lệ.'
+        ],
+        speakerNotes: 'Nằm yên bình ven dòng sông Cẩm Lệ, làng cổ Phong Lệ ngày nay thuộc phường Hòa Thọ Đông và xã Hòa Châu, thành phố Đà Nẵng. Khung ảnh thực tế bên phải cho thấy vẻ trầm mặc của không gian làng cổ hơn 500 năm tuổi — cái nôi đã nuôi dưỡng trọn vẹn lễ hội độc đáo này.',
+        render: () => `
+          ${headerHTML('PHẦN 1 • TỌA ĐỘ DI SẢN', 4, 'KHÔNG GIAN LÀNG CỔ VEN SÔNG & ĐÌNH PHONG LỆ')}
+          <div class="split-50-50">
+            <div class="stack">
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.mapPin}</div><h2 class="card-title">Vị trí địa lý ven sông Cẩm Lệ</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Tọa lạc trên dải phù sa màu mỡ ven dòng <strong>sông Cẩm Lệ</strong> hiền hòa.', 'vermilion')}
+                  ${bulletItem('Nay thuộc <strong>phường Hòa Thọ Đông (Q. Cẩm Lệ)</strong> và <strong>xã Hòa Châu (H. Hòa Vang)</strong>, TP. Đà Nẵng.', 'vermilion')}
+                </ul>
+              </div>
+              <div class="bento-card accent-gold">
+                <div class="card-head"><div class="card-icon gold">${ICONS.landmark}</div><h2 class="card-title">Bề dày lịch sử hơn 500 năm</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Ngôi làng cổ <strong>thuần nông, giàu truyền thống hiếu học</strong> nổi danh xứ Quảng.', 'gold')}
+                  ${bulletItem('Bảo lưu nguyên vẹn <strong>cổng đình cổ kính</strong> cùng nhiều thuần phong mỹ tục truyền đời.', 'gold')}
+                </ul>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.langCo,
+              'Ảnh chụp thực tế không gian làng cổ và đình làng Phong Lệ ven sông Cẩm Lệ, TP Đà Nẵng',
+              'Không gian lễ hội tại làng cổ Phong Lệ hơn 500 năm tuổi',
+              'Ảnh: Danang Fantasticity',
+              'LÀNG CỔ PHONG LỆ • ĐÀ NẴNG'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 5 — HUYỀN TÍCH CỒN THẦN (PHONG-LE-1.JPG) */
+      {
+        num: 5,
+        part: 'PHẦN 2 — Nguồn gốc & Truyền thuyết cồn Thần',
+        title: 'HUYỀN TÍCH CỒN THẦN (CỒN TRẠI MỤC)',
+        layoutDesc: 'Bento Split 50/50: Cột trái đặt ảnh chụp thực tế cồn Thần — cồn Trại Mục (Danang Fantasticity); Cột phải 2 thẻ đối lập nhấn mạnh điềm kỳ lạ giữa người lớn và lũ trẻ chăn trâu.',
+        bulletsSummary: [
+          'Giữa cánh đồng làng Phong Lệ nổi lên gò đất cao linh thiêng gọi là cồn Thần (cồn Trại Mục).',
+          'Điềm kỳ lạ: Người lớn hay gia súc bước lên cồn thường gặp trắc trở, vấp ngã hoặc đau ốm.',
+          'Ngược lại, lũ trẻ chăn trâu nô đùa, nghỉ ngơi trên gò lại hoàn toàn bình an, khỏe mạnh.'
+        ],
+        speakerNotes: 'Bước sang Phần 2, hãy cùng Minh Đạt và nhóm ngược dòng huyền tích cồn Thần. Tương truyền giữa đồng lúa Phong Lệ có gò đất nhô cao kỳ lạ: người lớn hay trâu bò bước lên đều đau ốm trắc trở, riêng lũ trẻ chăn trâu vui chơi trên gò lại luôn bình an, khỏe mạnh.',
+        render: () => `
+          ${headerHTML('PHẦN 2 • HUYỀN TÍCH DÂN GIAN', 5, 'HUYỀN TÍCH CỒN THẦN (CỒN TRẠI MỤC)', null, 'gold')}
+          <div class="split-50-50">
+            ${photoCard(
+              MEDIA.conThan,
+              'Ảnh thực tế không gian cồn Thần — cồn Trại Mục làng Phong Lệ',
+              'Quang cảnh không gian cồn Thần (cồn Trại Mục) làng Phong Lệ',
+              'Ảnh: Danang Fantasticity',
+              'CỒN THẦN — CỒN TRẠI MỤC'
+            )}
+            <div class="stack">
+              <div class="bento-card accent-gold">
+                <div class="card-head"><div class="card-icon gold">${ICONS.leaf}</div><h2 class="card-title">Gò đất thiêng giữa đồng lúa</h2></div>
+                <p class="card-text">Giữa cánh đồng làng Phong Lệ có gò đất nhô cao gắn với tảng đá trắng linh thiêng, dân gian gọi là <span class="kw">cồn Thần (cồn Trại Mục)</span>.</p>
+              </div>
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.spark}</div><h2 class="card-title">Điềm kỳ lạ phân định chủ thể</h2></div>
+                <ul class="bullet-list" style="margin-top:4px;">
+                  ${bulletItem('<strong>Người lớn &amp; gia súc:</strong> Hễ bước lên cồn thường gặp trắc trở, vấp ngã hoặc đau ốm.', 'vermilion')}
+                  ${bulletItem('<strong>Trẻ chăn trâu (mục đồng):</strong> Nô đùa, nghỉ ngơi trên gò lại hoàn toàn <strong>bình an, khỏe mạnh</strong>.', 'moss')}
+                  ${bulletItem('Khởi nguồn niềm tin tâm linh sâu sắc dành riêng cho thế hệ trẻ thơ trong làng.', 'gold')}
+                </ul>
+              </div>
+            </div>
+          </div>`
+      },
+
+      /* SLIDE 6 — THẦN TÍCH GIÁNG NGỰ & TÂM THỨC NÔNG NGHIỆP (KÈM ẢNH TẢNG ĐÁ TRẮNG) */
+      {
+        num: 6,
+        part: 'PHẦN 2 — Nguồn gốc & Truyền thuyết cồn Thần',
+        title: 'THẦN TÍCH GIÁNG NGỰ & TÂM THỨC NÔNG NGHIỆP',
+        layoutDesc: 'Bento 55/45 giàu thị giác: Cột trái 2 thẻ giải mã tâm thức nông nghiệp và nền tảng triết lý trao quyền cho trẻ thơ; Cột phải chèn ảnh thực tế tảng đá trắng linh thiêng tại cồn Thần (Báo Nhân Dân).',
+        bulletsSummary: [
+          'Dân làng tin rằng cồn Thần là nơi Thần Nông (vị thần cai quản nông nghiệp) giáng ngự nghỉ ngơi.',
+          'Tâm thức dân gian: Thần chỉ yêu chuộng sự trong trắng, thuần khiết của con trẻ và xa lánh bụi trần người lớn.',
+          'Truyền thuyết trở thành nền tảng triết lý để làng trao quyền cử hành nghi lễ cho trẻ nhỏ.'
+        ],
+        speakerNotes: 'Từ điềm lành bên tảng đá trắng linh thiêng ở ảnh bên phải, dân làng tin rằng cồn Thần là nơi Thần Nông giáng ngự. Bởi Thần chỉ yêu chuộng sự trong sáng của trẻ thơ và tránh xa toan tính người lớn, dân làng đã đồng lòng trao quyền tế lễ cho các em nhỏ.',
+        render: () => `
+          ${headerHTML('PHẦN 2 • TÂM THỨC DÂN GIAN', 6, 'THẦN TÍCH GIÁNG NGỰ & TÂM THỨC NÔNG NGHIỆP', null, 'gold')}
+          <div class="split-55-45">
+            <div class="stack">
+              <div class="bento-card accent-gold">
+                <div class="card-head"><div class="card-icon gold">${ICONS.sun}</div><h2 class="card-title">Linh địa Thần Nông giáng ngự</h2></div>
+                <p class="card-text">Người Phong Lệ tin rằng cồn Thần với tảng đá trắng là nơi <strong>Thần Nông</strong> — vị thần cai quản mùa màng — thường xuyên giáng ngự nghỉ ngơi.</p>
+              </div>
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.heart}</div><h2 class="card-title">Tôn quý sự thuần khiết tuổi thơ</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Thần chỉ yêu chuộng <strong>sự trong trắng, hồn nhiên của con trẻ</strong> và ghét bỏ bụi trần, toan tính người lớn.', 'vermilion')}
+                  ${bulletItem('Trở thành <strong>nền tảng triết lý nhân văn</strong> để cả cộng đồng trao quyền tế thần cho trẻ mục đồng.', 'gold')}
+                </ul>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.tangDaTrang,
+              'Cồn Thần với tảng đá trắng linh thiêng phía tây làng Phong Lệ',
+              'Cồn Thần — nơi có tảng đá trắng linh thiêng chuẩn bị nghi lễ',
+              'Ảnh: Báo Nhân Dân',
+              'TẢNG ĐÁ TRẮNG LINH THIÊNG'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 7 — BỐI CẢNH LỊCH SỬ RA ĐỜI LỄ HỘI (INTERACTIVE STEPPER 50/50) */
+      {
+        num: 7,
+        part: 'PHẦN 2 — Nguồn gốc & Truyền thuyết cồn Thần',
+        title: 'BỐI CẢNH LỊCH SỬ RA ĐỜI LỄ HỘI',
+        layoutDesc: 'Bố cục Stepper tinh giản 50/50 chuẩn PowerPoint: Cột trái gồm 3 mốc lịch sử (Hậu Lê – Nguyễn; Dựng nhà Trại Mục; Đồng thuận bô lão tộc họ), chuyển lần lượt bằng nút chuyển slide/phím mũi tên hoặc click trực tiếp thẻ; Cột phải đồng bộ ảnh chụp thật tương ứng.',
+        bulletsSummary: [
+          'Mốc 01 — Thời kỳ Hậu Lê – đầu thời Nguyễn: Làng cổ Phong Lệ ổn định cư dân và phát triển nông nghiệp lúa nước ven sông Cẩm Lệ.',
+          'Mốc 02 — Dựng nhà Trại Mục: Dân làng dựng nhà Trại Mục tại cồn Thần, lập bàn thờ và định kỳ tế tạ Thần Nông.',
+          'Mốc 03 — Đồng thuận cộng đồng: Nhận được sự đồng lòng và bảo trợ trọn vẹn của các bô lão cùng toàn thể tộc họ.'
+        ],
+        speakerNotes: 'Ngược dòng lịch sử qua 3 mốc tương tác bên trái, Lễ hội Mục đồng định hình từ thời Hậu Lê – đầu Nguyễn, khi dân làng dựng nhà Trại Mục trên cồn Thần và nhận được sự đồng thuận trọn vẹn của các bô lão, tộc họ. Mình sẽ bấm chuyển từng mốc để cả lớp xem ảnh tư liệu đối ứng bên phải.',
+        render: () => `
+          ${headerHTML('PHẦN 2 • INTERACTIVE STEPPER LỊCH SỬ', 7, 'BỐI CẢNH LỊCH SỬ RA ĐỜI LỄ HỘI')}
+          ${renderStepper('slide7', 'Mốc lịch sử', [
+            {
+              tag: 'MỐC 01 • THỜI ĐẠI HÌNH THÀNH',
+              title: 'Thời kỳ Hậu Lê – Đầu thời Nguyễn',
+              desc: 'Lễ hội định hình trong giai đoạn làng cổ Phong Lệ ven sông Cẩm Lệ phát triển bền vững nghề trồng lúa nước và thiết chế đình làng.',
+              photo: MEDIA.dinhLangCo,
+              alt: 'Không gian cổng đình làng cổ Phong Lệ ven sông Cẩm Lệ, TP Đà Nẵng',
+              caption: 'Không gian đình làng cổ Phong Lệ — chứng nhân hơn 500 năm lịch sử',
+              source: 'Ảnh: Danang Fantasticity',
+              badge: 'MỐC 01 • HẬU LÊ – NGUYỄN'
+            },
+            {
+              tag: 'MỐC 02 • XÂY DỰNG THIẾT CHẾ',
+              title: 'Dựng nhà Trại Mục & Lập bàn thờ',
+              desc: 'Dân làng dựng <strong>nhà Trại Mục</strong> ngay tại gò đất cồn Thần, lập bàn thờ tôn nghiêm và định kỳ tổ chức lễ tế tạ Thần Nông.',
+              photo: MEDIA.tangDaTrang,
+              alt: 'Cồn Thần và không gian lập bàn thờ tế Thần Nông tại làng Phong Lệ',
+              caption: 'Cồn Thần — nơi dân làng lập bàn thờ cúng tế Thần Nông định kỳ',
+              source: 'Ảnh: Báo Nhân Dân',
+              badge: 'MỐC 02 • NHÀ TRẠI MỤC'
+            },
+            {
+              tag: 'MỐC 03 • SỰ BẢO TRỢ CỘNG ĐỒNG',
+              title: 'Đồng thuận của bô lão & tộc họ',
+              desc: 'Lễ hội nhận được <strong>sự đồng thuận và hỗ trợ hoàn toàn</strong> của hội đồng bô lão cùng các chi phái, tộc họ trong làng Phong Lệ.',
+              photo: MEDIA.boLaoTeThan,
+              alt: 'Các vị bô lão và đại diện tộc họ làng Phong Lệ chung tay bảo trợ lễ hội',
+              caption: 'Hội đồng bô lão và đại diện các tộc họ làng Phong Lệ đồng lòng bảo trợ',
+              source: 'Ảnh: Báo Nhân Dân',
+              badge: 'MỐC 03 • BÔ LÃO & TỘC HỌ'
+            }
+          ], 'ratio-50-50')}`
+      },
+
+      /* SLIDE 8 — CHU KỲ MÙA VỤ (LAYOUT 50/50: 3 MỐC TRÁI + ẢNH CÁNH ĐỒNG MÙA GẶT PHẢI) */
+      {
+        num: 8,
+        part: 'PHẦN 2 — Nguồn gốc & Truyền thuyết cồn Thần',
+        title: 'CHU KỲ TỔ CHỨC & NHỊP ĐIỆU MÙA VỤ SAU GẶT',
+        layoutDesc: 'Bento 50/50 cân bằng thị giác: Bên trái xếp 3 thẻ mốc thời gian ("Tam niên đáo lệ", tháng 3–4 ÂL, tiết giao mùa); Bên phải chèn ảnh toàn cảnh cánh đồng lúa làng Phong Lệ thanh bình (Báo Nhân Dân).',
+        bulletsSummary: [
+          'Chu kỳ xưa: "Tam niên đáo lệ" (3 năm tổ chức một lần) vào các năm Tý, Ngọ, Mão, Dậu.',
+          'Thời điểm: Cuối tháng 3 hoặc tháng 4 âm lịch — thời điểm nông nhàn sau thu hoạch vụ lúa Đông – Xuân.',
+          'Bầu không khí: Tiết trời giao mùa lộng gió, cánh đồng vừa gặt xong hóa thành sân chơi rộng lớn.'
+        ],
+        speakerNotes: 'Theo hương ước cổ, lễ hội diễn ra theo chu kỳ "Tam niên đáo lệ" — ba năm một lần vào các năm Tý, Ngọ, Mão, Dậu. Chọn đúng cuối tháng 3, tháng 4 âm lịch sau vụ gặt Đông – Xuân, cả cánh đồng lúa bát ngát như bức ảnh toàn cảnh bên phải lập tức biến thành sân chơi rộn ràng cho trẻ thơ.',
+        render: () => `
+          ${headerHTML('PHẦN 2 • NHỊP ĐIỆU ĐỒNG QUÊ', 8, 'CHU KỲ TỔ CHỨC & NHỊP ĐIỆU MÙA VỤ SAU GẶT', null, 'gold')}
+          <div class="split-50-50">
+            <div class="stack" style="gap:12px;">
+              <div class="bento-card accent-vermilion" style="padding:15px 18px;">
+                <div class="card-head" style="margin-bottom:5px;"><div class="card-icon vermilion">${ICONS.calendar}</div><h2 class="card-title">Chu kỳ “Tam niên đáo lệ” (3 năm/lần)</h2></div>
+                <p class="card-text">Tổ chức trang trọng định kỳ vào các năm <strong>Tý, Ngọ, Mão, Dậu</strong> theo lệ làng truyền đời xứ Quảng.</p>
+              </div>
+              <div class="bento-card accent-gold" style="padding:15px 18px;">
+                <div class="card-head" style="margin-bottom:5px;"><div class="card-icon gold">${ICONS.sun}</div><h2 class="card-title">Cuối tháng 3 – tháng 4 Âm lịch</h2></div>
+                <p class="card-text">Thời điểm nông nhàn thư thái nhất ngay sau khi dân làng thu hoạch trọn vẹn <strong>vụ lúa Đông – Xuân</strong>.</p>
+              </div>
+              <div class="bento-card accent-moss" style="padding:15px 18px;">
+                <div class="card-head" style="margin-bottom:5px;"><div class="card-icon moss">${ICONS.wind}</div><h2 class="card-title">Tiết giao mùa lộng gió đồng quê</h2></div>
+                <p class="card-text">Mùa màng vừa gặt xong, rơm rạ thơm nồng, cả <strong>cánh đồng rộng lớn hóa thành sân chơi tuổi thơ</strong>.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.canhDong,
+              'Toàn cảnh từ trên cao cánh đồng lúa làng quê Phong Lệ và đoàn rước Thần Nông',
+              'Cánh đồng lúa thanh bình làng Phong Lệ mùa lễ hội nhìn từ trên cao',
+              'Ảnh: Báo Nhân Dân',
+              'CÁNH ĐỒNG LÀNG PHONG LỆ'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 9 — CẤU TRÚC KHÔNG GIAN TÂM LINH (ẢNH 2024-011.JPG) */
+      {
+        num: 9,
+        part: 'PHẦN 3 — Không gian thiêng & Chủ thể nghi lễ',
+        title: 'CẤU TRÚC KHÔNG GIAN TÂM LINH',
+        layoutDesc: 'Bento Split 50/50: Cột trái trình bày trục chuyển động 3 chặng (Đình làng → Bờ ruộng → Cồn Thần) và ý nghĩa kết nối; Cột phải chèn ảnh thực tế đội mục đồng & cờ ngũ hành (Danang Fantasticity).',
+        bulletsSummary: [
+          'Tuyến không gian chuyển động: Khởi phát từ Đình làng Phong Lệ → Bờ ruộng xóm làng → Tụ hội tại cồn Thần.',
+          'Tính gắn kết đặc sắc: Nối liền không gian hành chính – tín ngưỡng chung (Đình làng) với không gian lao động sản xuất (Cồn đồng ruộng).',
+          'Đội rước cờ ngũ hành đưa hơi thở linh thiêng lan tỏa khắp các xóm làng ven sông.'
+        ],
+        speakerNotes: 'Điểm đặc biệt của Lễ hội Mục đồng là không gian thiêng luôn vận động: khởi phát từ Đình làng Phong Lệ, đi qua các bờ ruộng xóm làng để tụ hội tại cồn Thần. Nhờ đó, không gian hành chính – tín ngưỡng chung hòa quyện mật thiết với chính đồng ruộng sản xuất.',
+        render: () => `
+          ${headerHTML('PHẦN 3 • KHÔNG GIAN NGHI LỄ', 9, 'CẤU TRÚC KHÔNG GIAN TÂM LINH')}
+          <div class="split-50-50">
+            <div class="stack">
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.compass}</div><h2 class="card-title">Tuyến không gian chuyển động</h2></div>
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0 10px;">
+                  <span class="chip vermilion">1. Đình làng Phong Lệ</span>
+                  <strong>→</strong>
+                  <span class="chip gold">2. Bờ ruộng xóm làng</span>
+                  <strong>→</strong>
+                  <span class="chip moss">3. Cồn Thần (Trại Mục)</span>
+                </div>
+                <p class="card-text">Đoàn rước cờ ngũ hành mở ra trục nghi lễ rực rỡ xuyên qua từng thửa ruộng và xóm làng.</p>
+              </div>
+              <div class="bento-card accent-gold">
+                <div class="card-head"><div class="card-icon gold">${ICONS.landmark}</div><h2 class="card-title">Gắn kết hai cực văn hóa làng xã</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Kết nối <strong>không gian hành chính – tín ngưỡng chung</strong> tại Đình làng.', 'gold')}
+                  ${bulletItem('Hòa quyện trực tiếp với <strong>không gian lao động sản xuất thực địa</strong> tại Cồn đồng ruộng.', 'gold')}
+                </ul>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.doiRuoc,
+              'Đội trẻ mục đồng và hàng cờ ngũ hành trong không gian nghi lễ làng Phong Lệ',
+              'Đội rước mục đồng cùng hàng cờ ngũ hành trên tuyến không gian thiêng',
+              'Ảnh: Danang Fantasticity',
+              'TRẺ MỤC ĐỒNG & CỜ NGŨ HÀNH'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 10 — INTERACTIVE TAB SWITCHER (NGÀY THƯỜNG ⇄ NGÀY HỘI) */
+      {
+        num: 10,
+        part: 'PHẦN 3 — Không gian thiêng & Chủ thể nghi lễ',
+        title: 'TRẺ MỤC ĐỒNG — TRUNG TÂM VŨ ĐÀI VĂN HÓA',
+        layoutDesc: 'Tương tác Tab Switcher 2 trạng thái ("Ngày thường: Thân phận thầm lặng" ⇄ "Ngày hội: Sứ giả tâm linh"): Khi bấm chuyển tab, cả thẻ chữ phân tích và ảnh thực tế minh họa (mục đồng chăn trâu ngoài đồng ⇄ đội mục đồng cờ ngũ hành) chuyển đổi êm ái.',
+        bulletsSummary: [
+          'Tab 1 — Ngày thường: Gắn bó nắng gió đồng ruộng, thân phận lao động nhỏ bé trong trật tự làng xã xưa.',
+          'Tab 2 — Ngày hội: Bước ra khỏi đời thường trở thành "sứ giả tâm linh", được cả làng tôn vinh và sắm sửa lễ phục.',
+          'Tương tác bấm chuyển tab trực tiếp ngay trên slide giúp người xem cảm nhận rõ sự thăng hoa thân phận.'
+        ],
+        speakerNotes: 'Để thấy rõ bước chuyển diệu kỳ của trẻ mục đồng, mời thầy cô và các bạn bấm chuyển hai tab trên màn hình: từ hình ảnh cậu bé chăn trâu lặng lẽ giữa đồng ngày thường, các em bước vào ngày hội để trở thành những "sứ giả tâm linh" rực rỡ cờ hoa được cả cộng đồng nâng niu.',
+        render: () => `
+          ${headerHTML('PHẦN 3 • TƯƠNG TÁC CHUYỂN ĐỔI TAB', 10, 'TRẺ MỤC ĐỒNG — TRUNG TÂM VŨ ĐÀI VĂN HÓA')}
+          <div class="tab-switcher-wrap" data-tabs="slide10">
+            <div class="tab-bar" role="tablist" aria-label="So sánh thân phận mục đồng ngày thường và ngày hội">
+              <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab-target="s10-t1">Ngày thường: Thân phận thầm lặng</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-target="s10-t2">Ngày hội: Sứ giả tâm linh</button>
+            </div>
+
+            <div class="tab-panel active" id="s10-t1" role="tabpanel">
+              <div class="bento-card soft accent-gold" style="justify-content:center;gap:14px;padding:26px;">
+                <span class="chip sand" style="align-self:flex-start;">TRẠNG THÁI 01 • ĐỜI SỐNG NGÀY THƯỜNG</span>
+                <div class="card-head"><div class="card-icon gold">${ICONS.leaf}</div><h2 class="card-title" style="font-size:23px;">Thân phận lao động thầm lặng</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Ngày ngày gắn bó với <strong>đồng ruộng, nắng gió</strong> và đàn trâu của gia đình, xóm làng.', 'gold')}
+                  ${bulletItem('Là lực lượng lao động nhỏ tuổi, ít tiếng nói trong trật tự tôn ty làng xã phong kiến xưa.', 'gold')}
+                  ${bulletItem('Âm thầm góp sức giữ gìn cơ nghiệp nông nghiệp của cả cộng đồng quê hương.', 'gold')}
+                </ul>
+              </div>
+              ${photoCard(
+                MEDIA.mucDongChanTrau,
+                'Hình ảnh trẻ mục đồng chăn trâu trên cánh đồng làng Phong Lệ',
+                'Tái hiện hình ảnh mục đồng chăn trâu mộc mạc trên cánh đồng Phong Lệ',
+                'Ảnh: Báo Nhân Dân',
+                'NGÀY THƯỜNG ĐỒNG RUỘNG'
+              )}
+            </div>
+
+            <div class="tab-panel" id="s10-t2" role="tabpanel">
+              <div class="bento-card accent-vermilion" style="justify-content:center;gap:14px;padding:26px;border-color:rgba(184,58,44,0.35);">
+                <span class="chip vermilion" style="align-self:flex-start;">TRẠNG THÁI 02 • TRONG NGÀY HỘI LÀNG</span>
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.crown}</div><h2 class="card-title" style="font-size:23px;color:var(--accent-vermilion-dark);">Thăng hoa thành “Sứ giả tâm linh”</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Bước ra khỏi thân phận thường ngày để đứng ở <strong>trung tâm vũ đài văn hóa</strong> của cả làng.', 'vermilion')}
+                  ${bulletItem('Được toàn thể dân làng <strong>tôn vinh, sắm sửa trang phục trang trọng</strong> và phục vụ chu đáo.', 'vermilion')}
+                  ${bulletItem('Đóng vai trò cầu nối thiêng liêng gửi gắm ước nguyện mùa màng lên Thần Nông.', 'gold')}
+                </ul>
+              </div>
+              ${photoCard(
+                MEDIA.doiRuoc,
+                'Đội mục đồng rực rỡ cờ ngũ hành trong ngày hội làng Phong Lệ',
+                'Các em mục đồng trang nghiêm, rạng rỡ trong đội hình rước cờ ngũ hành',
+                'Ảnh: Danang Fantasticity',
+                'NGÀY HỘI TÔN VINH'
+              )}
+            </div>
+          </div>`
+      },
+
+      /* SLIDE 11 — TIÊU CHUẨN TUYỂN CHỌN CHÁNH BÁI NHÍ */
+      {
+        num: 11,
+        part: 'PHẦN 3 — Không gian thiêng & Chủ thể nghi lễ',
+        title: 'TIÊU CHUẨN TUYỂN CHỌN “CHÁNH BÁI NHÍ”',
+        layoutDesc: 'Bento Split 55/45: Cột trái gồm thẻ vai trò Chánh bái nhí và 3 tiêu chuẩn tuyển chọn gắt gao; Cột phải chèn ảnh thực tế thần thái trang nghiêm của vị chủ tế nhí (Danang Fantasticity).',
+        bulletsSummary: [
+          'Chánh bái nhí là vị chủ tế đại diện toàn bộ dân làng dâng hương hoa tế Thần Nông.',
+          'Độ tuổi: Đang trong độ tuổi chăn trâu (10 – 14 tuổi), phong thái chững chạc.',
+          'Đức hạnh & gia phong: Ngoan ngoãn, thông minh, học giỏi, lễ phép; gia đình nền nếp, hòa thuận, không vướng tang chế.'
+        ],
+        speakerNotes: 'Đứng đầu đoàn tế là vị Chánh bái nhí — người thay mặt cả làng dâng hương tế Thần. Để đảm nhiệm trọng trách ấy, các bô lão tuyển chọn cực kỳ gắt gao từ độ tuổi 10 đến 14, đức hạnh học giỏi đến gia đình nền nếp — bởi con em được chọn là niềm tự hào lớn của cả dòng họ.',
+        render: () => `
+          ${headerHTML('PHẦN 3 • TUYỂN CHỌN CHỦ TẾ', 11, 'TIÊU CHUẨN TUYỂN CHỌN “CHÁNH BÁI NHÍ”', null, 'gold')}
+          <div class="split-55-45">
+            <div class="stack" style="gap:11px;">
+              <div class="bento-card dark-chestnut" style="padding:15px 20px;">
+                <span class="chip gold" style="align-self:flex-start;margin-bottom:6px;">VỊ TRÍ CHỦ TẾ TỐI CAO</span>
+                <p style="font-size:15.2px;line-height:1.5;color:#F5EBE0;">Đại diện toàn bộ dân làng Phong Lệ bước lên chiếu hoa dâng hương tế Thần — niềm vinh dự lớn lao của cả dòng họ.</p>
+              </div>
+              <div class="bento-card accent-gold" style="padding:13px 18px;">
+                <div class="card-title" style="font-size:16.5px;margin-bottom:3px;">1. Đúng độ tuổi mục đồng (10 – 14 tuổi)</div>
+                <p class="card-text" style="font-size:14.8px;">Đang trong độ tuổi chăn trâu, khỏe mạnh và đủ chững chạc điều hành nghi lễ.</p>
+              </div>
+              <div class="bento-card accent-vermilion" style="padding:13px 18px;">
+                <div class="card-title" style="font-size:16.5px;margin-bottom:3px;">2. Ngoan ngoãn, thông minh, học giỏi, lễ phép</div>
+                <p class="card-text" style="font-size:14.8px;">Sáng dạ để lĩnh hội nhanh lễ nghi cổ truyền và xướng đọc chúc văn mạch lạc.</p>
+              </div>
+              <div class="bento-card accent-moss" style="padding:13px 18px;">
+                <div class="card-title" style="font-size:16.5px;margin-bottom:3px;">3. Gia đình nền nếp, hòa thuận, không tang chế</div>
+                <p class="card-text" style="font-size:14.8px;">Nếp nhà mẫu mực, trên dưới thuận hòa và thanh sạch theo quan niệm truyền thống.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.chanhBaiPortrait,
+              'Thần thái trang nghiêm của vị Chánh bái nhí làng Phong Lệ trong ngày hội',
+              'Thần thái chững chạc, trang nghiêm của chủ tế nhí giữa vòng tay cộng đồng',
+              'Ảnh: Danang Fantasticity',
+              'CHÁNH BÁI NHÍ PHONG LỆ'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 12 — CẬN CẢNH PHỤC TRANG & KHÍ TÀI NGHI LỄ */
+      {
+        num: 12,
+        part: 'PHẦN 3 — Không gian thiêng & Chủ thể nghi lễ',
+        title: 'PHỤC TRANG & KHÍ TÀI NGHI LỄ',
+        layoutDesc: 'Bento Split 55/45: Cột trái 3 thẻ phân tích phục trang Chánh bái, đội phụ tế và đạo cụ nghi lễ; Cột phải khung ảnh cận cảnh phục trang áo thụng xanh, mũ cánh chuồn (tư liệu TTXVN / Danang Fantasticity).',
+        bulletsSummary: [
+          'Trang phục Chánh bái: Áo thụng xanh thêu hoa văn, quần trắng, đội mũ cánh chuồn, mang hia như quan viên triều đình.',
+          'Đội ngũ phụ tế: Quần áo nẹp đỏ viền vàng rực rỡ, đầu quấn khăn đóng chỉnh tề.',
+          'Đạo cụ nghi lễ: Cờ ngũ hành, lọng tàn, chiêng trống mục đồng và kiệu rước Thần Nông chạm trổ tinh xảo.'
+        ],
+        speakerNotes: 'Phục trang và khí tài trong lễ hội được đầu tư công phu chẳng kém nghi lễ triều đình xưa: Chánh bái mặc áo thụng xanh thêu hoa văn, đội mũ cánh chuồn, mang hia; đội phụ tế áo nẹp đỏ viền vàng quấn khăn đóng cùng cờ ngũ hành, lọng tàn và kiệu chạm trổ tinh xảo.',
+        render: () => `
+          ${headerHTML('PHẦN 3 • MỸ THUẬT LỄ PHỤC', 12, 'PHỤC TRANG & KHÍ TÀI NGHI LỄ')}
+          <div class="split-55-45">
+            <div class="stack">
+              <div class="bento-card accent-moss" style="padding:16px 20px;">
+                <div class="card-head" style="margin-bottom:5px;"><div class="card-icon moss">${ICONS.crown}</div><h2 class="card-title">Trang phục Chánh bái nhí</h2></div>
+                <p class="card-text"><strong>Áo thụng xanh thêu hoa văn</strong>, quần trắng, đội <strong>mũ cánh chuồn</strong>, mang hia truyền thống uy nghi như quan viên triều đình.</p>
+              </div>
+              <div class="bento-card accent-vermilion" style="padding:16px 20px;">
+                <div class="card-head" style="margin-bottom:5px;"><div class="card-icon vermilion">${ICONS.users}</div><h2 class="card-title">Đội ngũ phụ tế</h2></div>
+                <p class="card-text">Quần áo <strong>nẹp đỏ viền vàng</strong> nổi bật sắc lễ hội, đầu quấn <strong>khăn đóng</strong> chỉnh tề đồng bộ đội hình.</p>
+              </div>
+              <div class="bento-card accent-gold" style="padding:16px 20px;">
+                <div class="card-head" style="margin-bottom:5px;"><div class="card-icon gold">${ICONS.flag}</div><h2 class="card-title">Đạo cụ &amp; Khí tài nghi lễ</h2></div>
+                <p class="card-text"><strong>Cờ ngũ hành</strong>, lọng tàn, chiêng trống mục đồng cùng <strong>kiệu rước Thần Nông</strong> chạm trổ sơn son thếp vàng tinh xảo.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.phucTrangPrimary,
+              'Cận cảnh phục trang Chánh bái nhí áo thụng xanh, mũ cánh chuồn và đội phụ tế làng Phong Lệ',
+              'Cận cảnh lễ phục cổ truyền: áo thụng xanh, mũ cánh chuồn và cờ ngũ hành',
+              'Ảnh: TTXVN / Danang Fantasticity',
+              'LỄ PHỤC CHÁNH BÁI NHÍ',
+              MEDIA.phucTrangFallback
+            )}
+          </div>`
+      },
+
+      /* SLIDE 13 — ĐÊM TÚC TRỰC TẠI ĐÌNH LÀNG (KÈM ẢNH ĐÊM TẾ LỄ THẬT) */
+      {
+        num: 13,
+        part: 'PHẦN 4 — Diễn trình nghi lễ tế tự',
+        title: 'ĐÊM TÚC TRỰC TẠI ĐÌNH LÀNG',
+        layoutDesc: 'Bento Split 50/50: Cột trái 2 thẻ về quy trình bô lão kèm cặp tập dượt và ý nghĩa chuyển giao thế hệ; Cột phải chèn ảnh thực tế đình làng Thần Nông rực sáng trong đêm lễ (Báo Nhân Dân).',
+        bulletsSummary: [
+          'Diễn ra vào đêm trước ngày chính hội ngay tại không gian linh thiêng đình làng Phong Lệ.',
+          'Các bô lão trực tiếp hướng dẫn mục đồng tập dượt bài bản: đi đứng, quỳ lạy, dâng hương, đọc chúc văn.',
+          'Khoảnh khắc hội tụ chuyển giao mạch nguồn văn hóa giữa thế hệ bô lão và thế hệ măng non.'
+        ],
+        speakerNotes: 'Mở đầu cho Phần 4 do Thanh Ngọc biên tập là Đêm Túc trực tại đình làng vào tối trước ngày chính hội. Trong ánh đèn hương lung linh như khung ảnh bên phải, các bô lão ân cần chỉ dạy từng bước quỳ lạy, dâng hương để truyền lửa di sản sang thế hệ măng non.',
+        render: () => `
+          ${headerHTML('PHẦN 4 • KHỞI SỰ NGHI LỄ', 13, 'ĐÊM TÚC TRỰC TẠI ĐÌNH LÀNG', null, 'gold')}
+          <div class="split-50-50">
+            <div class="stack">
+              <div class="bento-card accent-gold">
+                <div class="card-head"><div class="card-icon gold">${ICONS.book}</div><h2 class="card-title">Bô lão hướng dẫn tập dượt bài bản</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Diễn ra vào <strong>đêm trước ngày chính hội</strong> ngay tại đình làng Phong Lệ.', 'gold')}
+                  ${bulletItem('Các bô lão trực tiếp chỉ dạy từng nhịp <strong>đi đứng, quỳ lạy, dâng hương và đọc chúc văn tế thần</strong>.', 'gold')}
+                </ul>
+              </div>
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.flame}</div><h2 class="card-title">Đêm chuyển giao văn hóa hai thế hệ</h2></div>
+                <p class="card-text">Không chỉ là buổi tổng duyệt nghi thức, Đêm Túc trực là khoảnh khắc thiêng liêng nối liền <strong>thế hệ bô lão</strong> với <strong>thế hệ măng non</strong> bằng niềm tự hào quê hương.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.demTucTruc,
+              'Đình làng Thần Nông làng Phong Lệ lung linh trong đêm lễ truyền thống',
+              'Không gian đình Thần Nông trang nghiêm rực sáng trong đêm trước chính hội',
+              'Ảnh: Báo Nhân Dân',
+              'ĐÊM TÚC TRỰC TẠI ĐÌNH'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 14 — ĐỘI HÌNH RƯỚC KIỆU XUẤT PHÁT (4 BƯỚC INTERACTIVE STEPPER 45/55) */
+      {
+        num: 14,
+        part: 'PHẦN 4 — Diễn trình nghi lễ tế tự',
+        title: 'LỄ RƯỚC THẦN NÔNG XUẤT PHÁT — ĐỘI HÌNH 4 LỚP',
+        layoutDesc: 'Bố cục Stepper tinh giản 45/55 chuẩn PowerPoint: Cột trái chỉ gồm 4 thẻ bước (01 Dẫn đầu → 04 Theo sau hộ tống), bấm phím tới/lui hoặc nút chuyển slide bên dưới để duyệt từng bước trước khi sang Slide 15 (vẫn hỗ trợ click trực tiếp vào thẻ); Cột phải 55% đồng bộ 4 ảnh thực tế.',
+        bulletsSummary: [
+          'Bước 01 — Dẫn đầu: Đội múa lân, cờ thần, cờ ngũ hành mở đường trong hồi chiêng trống bình minh.',
+          'Bước 02 — Kế tiếp: Phường bát âm mục đồng nhịp nhàng hòa tấu nhạc cổ.',
+          'Bước 03 — Trung tâm linh thiêng: Kiệu Thần Nông sơn son thếp vàng do 4 mục đồng khỏe mạnh khiêng vác.',
+          'Bước 04 — Theo sau hộ tống: Các vị bô lão áo dài khăn đóng, chức sắc và đông đảo dân làng thành kính hộ tống.'
+        ],
+        speakerNotes: 'Sáng sớm tinh mơ ngày chính hội, hồi chiêng trống vang lên thúc giục đoàn rước rời đình làng. Mình sẽ bấm qua từng lớp đội hình bằng nút mũi tên bên trái: mở đầu là đội cờ thần múa lân, kế tiếp là phường bát âm, trung tâm linh thiêng là kiệu Thần Nông do 4 mục đồng khiêng vác, và theo sau là bô lão cùng toàn thể dân làng.',
+        render: () => `
+          ${headerHTML('PHẦN 4 • INTERACTIVE STEPPER ĐỘI HÌNH', 14, 'LỄ RƯỚC THẦN NÔNG XUẤT PHÁT')}
+          ${renderStepper('slide14', 'Đội hình', [
+            {
+              tag: '01 • DẪN ĐẦU MỞ ĐƯỜNG',
+              title: 'Đội múa lân, cờ thần & cờ ngũ hành',
+              desc: 'Mở lối cho đoàn rước giữa ánh nắng bình minh trong tiếng chiêng trống gióng lên từng hồi thúc giục.',
+              photo: MEDIA.ruocCoLan,
+              alt: 'Đội cờ thần, cờ ngũ hành và múa lân dẫn đầu đoàn rước Lễ hội Mục đồng Phong Lệ',
+              caption: 'Bước 01: Đội cờ thần, cờ ngũ hành mở đường rực rỡ sắc màu',
+              source: 'Ảnh: Danang Fantasticity',
+              badge: '01 • DẪN ĐẦU MỞ ĐƯỜNG'
+            },
+            {
+              tag: '02 • KẾ TIẾP',
+              title: 'Phường bát âm mục đồng tấu nhạc cổ',
+              desc: 'Các em thiếu nhi trong phường bát âm nhịp nhàng hòa tấu nhạc cổ truyền giữ tiết tấu trang nghiêm.',
+              photo: MEDIA.doiBatAm,
+              alt: 'Các em thiếu nhi trong đội bát âm mục đồng hòa tấu nhạc cổ làng Phong Lệ',
+              caption: 'Bước 02: Thiếu nhi trong đội nhạc cổ mục đồng nhịp nhàng dẫn nhịp',
+              source: 'Ảnh: Danang Fantasticity',
+              badge: '02 • PHƯỜNG BÁT ÂM'
+            },
+            {
+              tag: '03 • TRUNG TÂM LINH THIÊNG',
+              title: '4 mục đồng khiêng Kiệu Thần Nông',
+              desc: 'Điểm nhấn tôn nghiêm nhất: <strong>Kiệu Thần Nông sơn son thếp vàng</strong> do <strong>4 mục đồng khỏe mạnh</strong> đồng đều nhịp bước khiêng vác.',
+              photo: MEDIA.ruocKieu,
+              alt: 'Cận cảnh 4 mục đồng khiêng kiệu Thần Nông sơn son thếp vàng trong Lễ hội Mục đồng Phong Lệ',
+              caption: 'Bước 03: Kiệu Thần Nông chạm trổ tinh xảo do 4 mục đồng khỏe mạnh khiêng vác',
+              source: 'Ảnh: TTXVN',
+              badge: '03 • KIỆU THẦN NÔNG'
+            },
+            {
+              tag: '04 • THEO SAU HỘ TỐNG',
+              title: 'Bô lão áo dài khăn đóng & Dân làng',
+              desc: 'Các vị bô lão, chức sắc và đông đảo người dân chỉnh tề trang phục truyền thống trân trọng theo sau hộ tống.',
+              photo: MEDIA.hoTongDanLang,
+              alt: 'Các vị bô lão áo dài khăn đóng và đông đảo dân làng Phong Lệ hộ tống đoàn rước',
+              caption: 'Bước 04: Bô lão áo dài khăn đóng cùng đông đảo người dân địa phương hộ tống',
+              source: 'Ảnh: Báo Nhân Dân',
+              badge: '04 • BÔ LÃO & DÂN LÀNG'
+            }
+          ])}`
+      },
+
+      /* SLIDE 15 — ĐẠI LỄ TẾ THẦN TẠI CỒN TRẠI MỤC (3 BƯỚC INTERACTIVE STEPPER 45/55) */
+      {
+        num: 15,
+        part: 'PHẦN 4 — Diễn trình nghi lễ tế tự',
+        title: 'ĐẠI LỄ TẾ THẦN TẠI CỒN TRẠI MỤC',
+        layoutDesc: 'Bố cục Stepper tinh giản 45/55 chuẩn PowerPoint: Cột trái gồm 3 thẻ bước đại tế, duyệt lần lượt bằng nút chuyển slide/bàn phím hoặc click trực tiếp thẻ; Cột phải đồng bộ 3 ảnh thực tế tại cồn Thần & tảng đá trắng linh thiêng.',
+        bulletsSummary: [
+          'Bước 01 — An vị kiệu Thần Nông: Đoàn rước về đến cồn Thần, kiệu được an vị trang trọng trước bàn thờ.',
+          'Bước 02 — Khởi sự đại tế: Chánh bái nhí bước lên chiếu hoa dâng rượu, dâng trà, đọc sớ tạ ơn trước tảng đá trắng linh thiêng.',
+          'Bước 03 — Khoảnh khắc độc bản: Toàn bộ người lớn đứng lùi phía sau, chắp tay thành kính tuân theo từng hiệu lệnh của chủ tế nhí.'
+        ],
+        speakerNotes: 'Khi đoàn rước tới cồn Trại Mục, đại lễ diễn ra qua ba bước trang nghiêm. Hãy theo dõi từng ảnh đối ứng bên phải khi mình chuyển bước: từ lúc an vị kiệu, vị Chánh bái nhí bước lên chiếu hoa tế lễ trước tảng đá trắng linh thiêng, đến khoảnh khắc người lớn lùi sau chắp tay thành kính.',
+        render: () => `
+          ${headerHTML('PHẦN 4 • INTERACTIVE STEPPER ĐẠI TẾ', 15, 'ĐẠI LỄ TẾ THẦN TẠI CỒN TRẠI MỤC')}
+          ${renderStepper('slide15', 'Tiến trình', [
+            {
+              tag: 'BƯỚC 01 • AN VỊ KIỆU THẦN NÔNG',
+              title: 'Đoàn rước tụ hội tại cồn Thần',
+              desc: 'Đoàn rước tiến đến cồn Trại Mục trong tiếng nhạc bát âm; kiệu Thần Nông được <strong>an vị trang trọng</strong> trước bàn thờ hướng ra cánh đồng.',
+              photo: MEDIA.anViConThan,
+              alt: 'Đoàn rước Mục đồng về đến cồn Thần an vị kiệu Thần Nông',
+              caption: 'Bước 01: Đoàn rước Mục đồng về đến cồn Thần cử hành phần lễ trang trọng',
+              source: 'Ảnh: Báo Nhân Dân',
+              badge: 'BƯỚC 01 • AN VỊ KIỆU'
+            },
+            {
+              tag: 'BƯỚC 02 • KHỞI SỰ ĐẠI TẾ',
+              title: 'Chánh bái nhí tế lễ trước tảng đá trắng',
+              desc: 'Vị Chánh bái nhí bước lên chiếu hoa, đĩnh đạc thực hiện các tuần <strong>dâng rượu, dâng trà và đọc sớ tạ ơn</strong> trước tảng đá trắng linh thiêng.',
+              photo: MEDIA.daiTeConThan,
+              alt: 'Nghi thức cúng tế Thần Nông trước tảng đá trắng linh thiêng tại cồn Thần',
+              caption: 'Bước 02: Nghi thức cúng tế trang nghiêm trước tảng đá trắng linh thiêng tại cồn Thần',
+              source: 'Ảnh: Báo Nhân Dân',
+              badge: 'BƯỚC 02 • ĐẠI TẾ CỒN THẦN'
+            },
+            {
+              tag: 'BƯỚC 03 • KHOẢNH KHẮC ĐỘC BẢN',
+              title: 'Người lớn lùi sau chắp tay thành kính',
+              desc: 'Toàn bộ người lớn và bô lão <strong>đứng lùi lại phía sau, chắp tay thành kính</strong> cúi đầu tuân theo từng nhịp hiệu lệnh của chủ tế nhí.',
+              photo: MEDIA.khanNguyenChanhBai,
+              alt: 'Chủ tế làm lễ xin phép Thần Nông chứng giám trong sự thành kính của dân làng Phong Lệ',
+              caption: 'Bước 03: Thành kính xin Thần chứng giám theo từng hiệu lệnh chủ tế',
+              source: 'Ảnh: Báo Nhân Dân',
+              badge: 'BƯỚC 03 • THÀNH KÍNH'
+            }
+          ])}`
+      },
+
+      /* SLIDE 16 — LỜI KHẤN NGUYỆN CẦU MÙA & CẦU AN (3 TÂM NGUYỆN INTERACTIVE STEPPER 45/55) */
+      {
+        num: 16,
+        part: 'PHẦN 4 — Diễn trình nghi lễ tế tự',
+        title: 'LỜI KHẤN NGUYỆN CẦU MÙA & CẦU AN',
+        layoutDesc: 'Bố cục Stepper tinh giản 45/55 chuẩn PowerPoint: Cột trái gồm 3 thẻ tâm nguyện, duyệt từng bước bằng nút chuyển slide/phím mũi tên hoặc click trực tiếp thẻ; Cột phải đồng bộ ảnh khoảnh khắc chắp tay thành kính trước bàn thờ Thần Nông tại cồn Thần.',
+        bulletsSummary: [
+          'Tâm nguyện 01 — Tạ ơn mùa cũ: Thành kính tạ ơn Thần Nông đã ban cho vụ lúa Đông – Xuân tốt tươi, ấm no.',
+          'Tâm nguyện 02 — Mưa thuận gió hòa: Khấn nguyện vụ mùa kế tiếp phong điều vũ thuận, lúa thóc đầy bồ.',
+          'Tâm nguyện 03 — Gia súc khỏe, trẻ em đỗ đạt: Cầu đàn trâu bò không dịch bệnh; trẻ nhỏ khỏe mạnh, chăm ngoan, học hành đỗ đạt.'
+        ],
+        speakerNotes: 'Bản chúc văn vang lên giữa trời đất Phong Lệ gói trọn ba tầng tâm nguyện chân thành. Mình sẽ lần lượt lật qua từng thẻ tâm nguyện bên trái — từ lời tạ ơn vụ Đông Xuân, cầu mưa thuận gió hòa đến ước nguyện cho đàn trâu khỏe mạnh và tuổi thơ làng quê học hành đỗ đạt.',
+        render: () => `
+          ${headerHTML('PHẦN 4 • INTERACTIVE STEPPER TÂM NGUYỆN', 16, 'LỜI KHẤN NGUYỆN CẦU MÙA & CẦU AN', null, 'gold')}
+          ${renderStepper('slide16', 'Tâm nguyện', [
+            {
+              tag: 'TÂM NGUYỆN 01 • TRI ÂN MÙA CŨ',
+              title: 'Tạ ơn vụ mùa Đông – Xuân ấm no',
+              desc: 'Thành kính <strong>tạ ơn Thần Nông</strong> đã chở che, ban cho dân làng Phong Lệ một vụ lúa Đông – Xuân tươi tốt, no đủ.',
+              photo: MEDIA.khanNguyenChanhBai,
+              alt: 'Khoảnh khắc chắp tay thành kính khấn nguyện trước bàn thờ Thần Nông tại cồn Thần',
+              caption: 'Chắp tay thành kính dâng lời tạ ơn trước bàn thờ Thần Nông tại cồn Thần',
+              source: 'Ảnh: Báo Nhân Dân',
+              badge: 'TÂM NGUYỆN 01 • TẠ ƠN'
+            },
+            {
+              tag: 'TÂM NGUYỆN 02 • CẦU MÙA MÀNG',
+              title: 'Cầu mưa thuận gió hòa, lúa thóc đầy bồ',
+              desc: 'Khấn nguyện cho vụ mùa kế tiếp <strong>“phong điều vũ thuận”</strong>, đồng ruộng xanh tươi, cây lúa trĩu bông, thóc gạo đầy bồ.',
+              photo: MEDIA.muaThuanGioHoa,
+              alt: 'Không gian lễ hội cầu mưa thuận gió hòa tại làng quê Phong Lệ',
+              caption: 'Lời khấn nguyện cho vụ mùa kế tiếp mưa thuận gió hòa, bội thu',
+              source: 'Ảnh: Danang Fantasticity',
+              badge: 'TÂM NGUYỆN 02 • CẦU MÙA'
+            },
+            {
+              tag: 'TÂM NGUYỆN 03 • CẦU AN & HIẾU HỌC',
+              title: 'Gia súc khỏe mạnh, trẻ em đỗ đạt',
+              desc: 'Cầu cho <strong>đàn gia súc mau lớn, không dịch bệnh</strong>; trẻ em trong làng khỏe mạnh, chăm ngoan và <strong>học hành đỗ đạt</strong>.',
+              photo: MEDIA.treEmDuLe,
+              alt: 'Các em nhỏ làng Phong Lệ rạng rỡ, thành kính trong ngày hội lễ tế Thần Nông',
+              caption: 'Ước nguyện cho thế hệ trẻ Phong Lệ khỏe mạnh, chăm ngoan, học hành đỗ đạt',
+              source: 'Ảnh: Danang Fantasticity',
+              badge: 'TÂM NGUYỆN 03 • CẦU AN'
+            }
+          ])}`
+      },
+
+      /* SLIDE 17 — NGHI THỨC HỒI KIỆU & TẠ LỄ (50/50 CÓ ẢNH THỰC TẾ HỒI ĐỀN THỜ) */
+      {
+        num: 17,
+        part: 'PHẦN 4 — Diễn trình nghi lễ tế tự',
+        title: 'NGHI THỨC HỒI KIỆU & TẠ LỄ',
+        layoutDesc: 'Bento 50/50 giàu hình ảnh: Cột trái 2 thẻ chuyển nhịp (Khép lại Phần Lễ → Mở màn Phần Hội); Cột phải chèn ảnh thực tế nghi thức sau khi rước Thần Nông hồi về đền thờ (Báo Nhân Dân).',
+        bulletsSummary: [
+          'Hoàn tất các tuần tế rượu và hóa sớ tạ ơn, linh vị Thần Nông được rước hồi về an vị tại đình làng.',
+          'Dân làng tổ chức nghi lễ tạ ơn khép lại trọn vẹn phần Lễ trang trọng.',
+          'Tiếng trống hội gióng lên mở đường cho không khí tưng bừng, rộn rã của phần Hội.'
+        ],
+        speakerNotes: 'Hoàn tất các tuần tế rượu và hóa sớ tạ ơn tại cồn Thần, đoàn nghi trượng rước linh vị Thần Nông hồi về an vị tại đền thờ như khung ảnh bên phải. Nghi lễ tạ ơn khép lại phần Lễ nghiêm trang, mở ra không khí tưng bừng của phần Hội.',
+        render: () => `
+          ${headerHTML('PHẦN 4 • CHUYỂN TIẾP PHẦN HỘI', 17, 'NGHI THỨC HỒI KIỆU & TẠ LỄ')}
+          <div class="split-50-50">
+            <div class="stack">
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.flag}</div><h2 class="card-title">Hóa sớ &amp; Rước linh vị hồi đình</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Hoàn tất các tuần tế rượu và nghi thức <strong>hóa sớ tạ ơn</strong> tại cồn Trại Mục.', 'vermilion')}
+                  ${bulletItem('Đoàn rước trang trọng đưa <strong>linh vị Thần Nông</strong> hồi về an vị tại đình làng Phong Lệ.', 'vermilion')}
+                </ul>
+              </div>
+              <div class="bento-card accent-gold" style="background:linear-gradient(155deg,#FFFFFF 0%,#FCF4E4 100%);">
+                <div class="card-head"><div class="card-icon gold">${ICONS.spark}</div><h2 class="card-title">Tạ lễ &amp; Khai hội tưng bừng</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Dân làng cử hành <strong>nghi lễ tạ ơn</strong> đánh dấu phần Lễ thành công viên mãn.', 'gold')}
+                  ${bulletItem('Chính thức mở đường cho <strong>không gian sinh hoạt phần Hội</strong> rộn rã dành cho trẻ thơ.', 'gold')}
+                </ul>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.hoiKieuDenTho,
+              'Nghi lễ trang trọng sau khi rước linh vị Thần Nông hồi về đền thờ làng Phong Lệ',
+              'Không gian đình thờ trang nghiêm sau nghi thức rước linh vị Thần Nông hồi đình',
+              'Ảnh: Báo Nhân Dân',
+              'HỒI KIỆU & TẠ LỄ'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 18 — PHẦN HỘI: TRÒ CHƠI DÂN GIAN (BÁO NHÂN DÂN) */
+      {
+        num: 18,
+        part: 'PHẦN 5 — Không gian sinh hoạt phần Hội',
+        title: 'PHẦN HỘI: ĐẤU VẬT MỤC ĐỒNG & TRÒ CHƠI ĐỒNG RUỘNG',
+        layoutDesc: 'Bento Split 55/45: Cột trái 2 thẻ phân tách nhóm trò chơi rèn thể lực (Đấu vật, Kéo co, Đập om) và trò chơi đồng ruộng (Bắt trạch trong chum, Thả diều); Cột phải chèn ảnh tư liệu Báo Nhân Dân về trẻ em Phong Lệ hòa mình trong ngày hội.',
+        bulletsSummary: [
+          'Đấu vật mục đồng trên sới bùn/cát phô diễn sức dẻo dai; kéo co & đập om đất sôi nổi tiếng hò reo.',
+          'Bắt trạch trong chum thử thách sự khéo léo, kiên nhẫn của các em nhỏ.',
+          'Thả diều trên ruộng gặt: Bầu trời lộng gió rợp bóng cánh diều giấy chở ước mơ tuổi thơ.'
+        ],
+        speakerNotes: 'Bước sang Phần 5 do Bảo Thy biên tập, không khí làng quê bừng lên rộn rã. Các em nhỏ được thỏa sức tranh tài từ sới đấu vật mục đồng, kéo co, đập om đất cho đến trò bắt trạch trong chum và thả diều giấy trên cánh đồng vừa gặt.',
+        render: () => `
+          ${headerHTML('PHẦN 5 • TRÒ CHƠI DÂN GIAN', 18, 'ĐẤU VẬT MỤC ĐỒNG & TRÒ CHƠI ĐỒNG RUỘNG', null, 'gold')}
+          <div class="split-55-45">
+            <div class="stack">
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.award}</div><h2 class="card-title">Trò chơi rèn luyện thể lực</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('<strong>Đấu vật mục đồng:</strong> Sới vật bùn hoặc cát nơi các cậu bé phô diễn sự nhanh nhẹn, sức dẻo dai.', 'vermilion')}
+                  ${bulletItem('<strong>Kéo co, đập om đất:</strong> Trò chơi tập thể thu hút tiếng cười giòn giã và sự cổ vũ của dân làng.', 'vermilion')}
+                </ul>
+              </div>
+              <div class="bento-card accent-moss">
+                <div class="card-head"><div class="card-icon moss">${ICONS.wind}</div><h2 class="card-title">Trò chơi gắn liền với đồng ruộng</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('<strong>Bắt trạch trong chum:</strong> Thử thách sự khéo léo, dẻo dai và tính kiên nhẫn của các em.', 'moss')}
+                  ${bulletItem('<strong>Thả diều trên ruộng gặt:</strong> Bầu trời sau mùa gặt rợp bóng những cánh diều giấy đủ sắc màu.', 'moss')}
+                </ul>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.phanHoiTreEm,
+              'Trẻ em và người dân làng Phong Lệ hóa thân mục đồng sôi nổi trong ngày hội',
+              'Trẻ em làng Phong Lệ rạng rỡ hòa mình vào không khí trò chơi phần Hội',
+              'Ảnh: Báo Nhân Dân',
+              'PHẦN HỘI MỤC ĐỒNG'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 19 — ĐỒNG DAO & CÂU CA CHĂN TRÂU (KÈM ẢNH BÁO NHÂN DÂN) */
+      {
+        num: 19,
+        part: 'PHẦN 5 — Không gian sinh hoạt phần Hội',
+        title: 'ĐỒNG DAO & NHỮNG CÂU CA CHĂN TRÂU',
+        layoutDesc: 'Bento Split 55/45 giàu cảm xúc: Cột trái 2 thẻ trích dẫn đồng dao cổ truyền xứ Quảng cùng thẻ âm thanh sáo diều; Cột phải chèn ảnh thực tế người dân và du khách hòa mình vào không gian văn nghệ hội làng (Báo Nhân Dân).',
+        bulletsSummary: [
+          'Tái hiện khúc đồng dao chăn trâu quen thuộc: "Trâu ơi ta bảo trâu này...".',
+          'Ngân vang điệu đồng dao cổ xứ Quảng: "Chiềng chiềng chiềng chiêng, ngoảnh mặt ra biển...".',
+          'Tiếng sáo diều vi vu hòa cùng tiếng hát nghêu ngao dệt nên bản hòa âm thanh bình của làng quê Việt.'
+        ],
+        speakerNotes: 'Giữa tiếng trống hội rộn ràng là những thanh âm trong trẻo của tuổi thơ đồng quê. Những câu đồng dao xứ Quảng như "Trâu ơi ta bảo trâu này..." hay "Chiềng chiềng chiềng chiêng..." hòa cùng tiếng sáo diều tạo nên bản hòa âm thanh bình chạm đến trái tim người nghe.',
+        render: () => `
+          ${headerHTML('PHẦN 5 • ÂM HƯỞNG ĐỒNG QUÊ', 19, 'ĐỒNG DAO & NHỮNG CÂU CA CHĂN TRÂU', null, 'gold')}
+          <div class="split-55-45">
+            <div class="stack" style="gap:12px;">
+              <div class="verse-box">
+                <span class="chip gold" style="align-self:flex-start;">ĐỒNG DAO CHĂN TRÂU</span>
+                <p class="verse-quote">“Trâu ơi ta bảo trâu này…”</p>
+                <p class="card-muted">Lời thủ thỉ hồn nhiên gắn kết tình bạn giữa trẻ mục đồng và con trâu cần mẫn trên đồng lúa.</p>
+              </div>
+              <div class="verse-box vermilion">
+                <span class="chip vermilion" style="align-self:flex-start;">ĐỒNG DAO CỔ XỨ QUẢNG</span>
+                <p class="verse-quote">“Chiềng chiềng chiềng chiêng, ngoảnh mặt ra biển…”</p>
+                <p class="card-muted">Điệu hát mộc mạc vang vọng qua nhiều thế hệ, hòa cùng tiếng sáo diều vi vu giữa không gian hội làng.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.phanHoiCongDong,
+              'Người dân và du khách hòa mình vào không gian sinh hoạt phần Hội làng Phong Lệ',
+              'Người dân và du khách cùng hòa vào không gian diễn xướng lễ hội Mục đồng',
+              'Ảnh: Báo Nhân Dân',
+              'HÒA ÂM LÀNG QUÊ VIỆT'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 20 — MÂM CỖ MỤC ĐỒNG – BỮA TIỆC ÂN TÌNH (ẢNH CHUẨN BỊ MÂM LỄ TRUYỀN THỐNG) */
+      {
+        num: 20,
+        part: 'PHẦN 5 — Không gian sinh hoạt phần Hội',
+        title: 'MÂM CỖ MỤC ĐỒNG — BỮA TIỆC ÂN TÌNH',
+        layoutDesc: 'Bento Split 55/45: Cột trái trình bày 5 món ăn truyền thống xứ Quảng và ý nghĩa bù đắp yêu thương; Cột phải chèn ảnh thực tế người dân Phong Lệ tự tay chuẩn bị mâm lễ truyền thống (Báo Nhân Dân).',
+        bulletsSummary: [
+          'Nét văn hóa ẩm thực đặc sắc: Dân làng tự tay chuẩn bị những mâm cỗ thịnh soạn nhất dành riêng cho con trẻ.',
+          'Các món ăn mộc mạc xứ Quảng: Xôi gà, bánh tráng nướng, thịt heo luộc cuốn bánh tráng, bánh ú, bánh ít.',
+          'Ý nghĩa ân tình: Sự chăm sóc, yêu thương và bù đắp của người lớn cho những nhọc nhằn đồng ruộng của các em.'
+        ],
+        speakerNotes: 'Một nét đẹp ấm lòng bậc nhất trong ngày hội là Mâm cỗ Mục đồng. Như bức ảnh bên phải, chính tay các bậc cao niên và dân làng chuẩn bị xôi gà, bánh tráng nướng, thịt heo luộc cuốn bánh tráng, bánh ú, bánh ít dành riêng cho các em — như lời tri ân dịu dàng gửi đến tuổi thơ vất vả.',
+        render: () => `
+          ${headerHTML('PHẦN 5 • VĂN HÓA ẨM THỰC', 20, 'MÂM CỖ MỤC ĐỒNG — BỮA TIỆC ÂN TÌNH')}
+          <div class="split-55-45">
+            <div class="stack">
+              <div class="bento-card accent-gold">
+                <div class="card-head"><div class="card-icon gold">${ICONS.utensils}</div><h2 class="card-title">Thực đơn mộc mạc đậm vị xứ Quảng</h2></div>
+                <p class="card-muted" style="margin-bottom:10px;">Dân làng tự tay chuẩn bị những mâm cỗ thịnh soạn nhất dành riêng cho các em nhỏ:</p>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                  <span class="chip gold">Xôi gà</span>
+                  <span class="chip sand">Bánh tráng nướng</span>
+                  <span class="chip vermilion">Thịt heo luộc cuốn bánh tráng</span>
+                  <span class="chip sand">Bánh ú</span>
+                  <span class="chip moss">Bánh ít truyền thống</span>
+                </div>
+              </div>
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.heart}</div><h2 class="card-title">Bữa tiệc ân tình &amp; bù đắp</h2></div>
+                <p class="card-text">Mâm cỗ là biểu hiện cụ thể của <strong>sự chăm sóc, yêu thương và bù đắp</strong> mà cả cộng đồng người lớn trân trọng dành tặng cho những nhọc nhằn đồng ruộng của trẻ thơ.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.mamCoLe,
+              'Người dân làng Phong Lệ tự tay chuẩn bị mâm cỗ và lễ vật truyền thống xôi gà',
+              'Dân làng Phong Lệ tự tay chuẩn bị mâm cỗ và lễ vật truyền thống dâng lễ',
+              'Ảnh: Báo Nhân Dân',
+              'ẨM THỰC XỨ QUẢNG'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 21 — MINI QUIZ TƯƠNG TÁC GIỮA GIỜ (ZERO HEX CODES IN VISIBLE TEXT) */
+      {
+        num: 21,
+        part: 'PHẦN 5 — Trò chơi tương tác giữa giờ (Mini Quiz)',
+        title: 'MINI QUIZ TƯƠNG TÁC GIỮA GIỜ',
+        layoutDesc: 'Bố cục Bento Quiz tương tác trực tiếp: Bấm chọn một trong 4 ô phương án A, B, C, D để tô sáng đáp án đúng bằng viền vàng rơm sang trọng và mở phần giải thích ngay bên dưới.',
+        bulletsSummary: [
+          'Câu hỏi: "Theo tục xưa làng Phong Lệ, ai là người duy nhất được bước lên chiếu hoa chủ trì đại lễ tế Thần Nông?"',
+          'Thiết kế 4 ô phương án A, B, C, D dạng nút bấm tương tác sắc nét.',
+          'Đáp án đúng nổi bật viền vàng rơm sang trọng: "Em bé chăn trâu được chọn làm Chánh bái nhí".'
+        ],
+        speakerNotes: 'Để khuấy động không khí giữa giờ, Bảo Thy và Duy Khang mời cả lớp cùng chinh phục câu đố trên màn hình: "Theo tục xưa làng Phong Lệ, ai là người duy nhất được bước lên chiếu hoa chủ trì đại lễ tế Thần Nông?" Xin mời cánh tay nhanh nhất trước khi mình bấm mở đáp án!',
+        render: () => `
+          ${headerHTML('TƯƠNG TÁC GIỮA GIỜ • MINI QUIZ', 21, 'TRÒ CHƠI TƯƠNG TÁC GIỮA GIỜ', null, 'vermilion')}
+          <div class="quiz-wrap" id="quizStage">
+            <div class="quiz-prompt-card">
+              <div class="quiz-badge-icon" aria-hidden="true">${ICONS.help}</div>
+              <div class="quiz-prompt-text">“Theo tục xưa làng Phong Lệ, ai là người duy nhất được bước lên chiếu hoa chủ trì đại lễ tế Thần Nông?”</div>
+            </div>
+
+            <div class="quiz-grid" role="group" aria-label="4 phương án trả lời trắc nghiệm">
+              <button type="button" class="quiz-btn" data-choice="A">
+                <span class="quiz-letter">A</span>
+                <span class="quiz-label">Vị bô lão cao niên và có uy tín nhất làng</span>
+              </button>
+              <button type="button" class="quiz-btn" data-choice="B">
+                <span class="quiz-letter">B</span>
+                <span class="quiz-label">Em bé chăn trâu được chọn làm Chánh bái nhí</span>
+              </button>
+              <button type="button" class="quiz-btn" data-choice="C">
+                <span class="quiz-letter">C</span>
+                <span class="quiz-label">Quan huyện hoặc đại diện chức sắc triều đình</span>
+              </button>
+              <button type="button" class="quiz-btn" data-choice="D">
+                <span class="quiz-letter">D</span>
+                <span class="quiz-label">Trưởng tộc của dòng họ lớn nhất làng Phong Lệ</span>
+              </button>
+            </div>
+
+            <div class="quiz-feedback-shell">
+              <div class="quiz-feedback" id="quizFeedback" aria-live="polite">
+                <div style="font-size:15.5px;font-weight:600;color:var(--text-chestnut);line-height:1.48;" id="quizFeedbackText">
+                  Bấm chọn một phương án (A, B, C hoặc D) để hiển thị đáp án đúng nổi bật viền vàng rơm!
+                </div>
+                <button type="button" class="btn-secondary" id="btnResetQuiz" style="flex-shrink:0;">Làm lại</button>
+              </div>
+            </div>
+          </div>`
+      },
+
+      /* SLIDE 22 — INTERACTIVE TAB SWITCHER (TÔN TY PHONG KIẾN XƯA ⇄ DÂN CHỦ LÀNG XÃ PHONG LỆ) */
+      {
+        num: 22,
+        part: 'PHẦN 6 — Giá trị văn hóa & Hiện tại',
+        title: 'GIÁ TRỊ NHÂN VĂN TIẾN BỘ',
+        layoutDesc: 'Tương tác Tab Switcher 2 trạng thái ("Tôn ty phong kiến xưa" ⇄ "Dân chủ làng xã Phong Lệ"): Chuyển mượt cả khối nội dung phân tích lẫn ảnh chụp thực tế tương ứng (Bô lão tế thần ⇄ Thế hệ trẻ làm chủ thể lễ hội, Báo Nhân Dân).',
+        bulletsSummary: [
+          'Tab 1 — Tôn ty phong kiến xưa: Nghi lễ tế tự truyền thống đặt thứ bậc tuổi tác và chức sắc lên trên hết.',
+          'Tab 2 — Dân chủ làng xã Phong Lệ: Phá vỡ khoảng cách giai cấp, tôn vinh quyền trẻ em và nhóm lao động yếu thế nhất.',
+          'Minh chứng hùng hồn cho hạt nhân tư tưởng nhân đạo, tiến bộ đã nảy mầm từ hàng thế kỷ trước.'
+        ],
+        speakerNotes: 'Để nhìn rõ chiều sâu nhân văn vượt thời đại của di sản này, mời cả lớp bấm chuyển hai tab trên màn hình: so sánh giữa trật tự tôn ty phong kiến xưa với tinh thần dân chủ làng xã Phong Lệ — nơi trẻ em chăn trâu được trao vị thế trang trọng nhất.',
+        render: () => `
+          ${headerHTML('PHẦN 6 • TƯƠNG TÁC CHUYỂN ĐỔI TAB', 22, 'GIÁ TRỊ NHÂN VĂN TIẾN BỘ')}
+          <div class="tab-switcher-wrap" data-tabs="slide22">
+            <div class="tab-bar" role="tablist" aria-label="Đối chiếu tôn ty phong kiến xưa và dân chủ làng xã Phong Lệ">
+              <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab-target="s22-t1">Tôn ty phong kiến xưa</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab-target="s22-t2">Dân chủ làng xã Phong Lệ</button>
+            </div>
+
+            <div class="tab-panel active" id="s22-t1" role="tabpanel">
+              <div class="bento-card soft accent-gold" style="justify-content:center;gap:14px;padding:26px;">
+                <span class="chip sand" style="align-self:flex-start;">TRẬT TỰ TRUYỀN THỐNG</span>
+                <div class="card-head"><div class="card-icon gold">${ICONS.landmark}</div><h2 class="card-title" style="font-size:23px;">Tôn ty phong kiến nghiêm ngặt</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('Các lễ tế lớn xưa kia tuân thủ chặt chẽ lệ <strong>“triều đình trọng tước, hương đảng trọng xỉ”</strong>.', 'gold')}
+                  ${bulletItem('Quyền chủ tế và đọc chúc văn luôn thuộc về các <strong>bậc bô lão, trưởng tộc hoặc chức sắc</strong>.', 'gold')}
+                  ${bulletItem('Trẻ nhỏ — đặc biệt là trẻ chăn trâu — hầu như không có vai trò trung tâm trong đại lễ.', 'gold')}
+                </ul>
+              </div>
+              ${photoCard(
+                MEDIA.boLaoTeThan,
+                'Các vị bô lão và trưởng tộc trong nghi thức tế thần truyền thống tại Phong Lệ',
+                'Các bậc trưởng làng, đại diện tộc họ giữ gìn lễ nghi truyền thống',
+                'Ảnh: Báo Nhân Dân',
+                'NGHI LỄ TRUYỀN THỐNG'
+              )}
+            </div>
+
+            <div class="tab-panel" id="s22-t2" role="tabpanel">
+              <div class="bento-card accent-vermilion" style="justify-content:center;gap:14px;padding:26px;border-color:rgba(184,58,44,0.35);">
+                <span class="chip vermilion" style="align-self:flex-start;">BƯỚC ĐỘT PHÁ NHÂN VĂN</span>
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.heart}</div><h2 class="card-title" style="font-size:23px;color:var(--accent-vermilion-dark);">Dân chủ làng xã &amp; Quyền trẻ em</h2></div>
+                <ul class="bullet-list">
+                  ${bulletItem('<strong>Phá vỡ khoảng cách giai cấp</strong> và thứ bậc tôn ty nghiêm ngặt của xã hội cũ.', 'vermilion')}
+                  ${bulletItem('<strong>Tôn vinh đứa trẻ chăn trâu</strong> — nhóm đối tượng yếu thế và chịu nhiều thiệt thòi nhất.', 'vermilion')}
+                  ${bulletItem('Minh chứng hùng hồn về <strong>tư tưởng nhân đạo, tiến bộ</strong> trong văn hóa truyền thống Việt Nam.', 'gold')}
+                </ul>
+              </div>
+              ${photoCard(
+                MEDIA.danChuLangXa,
+                'Thế hệ trẻ làng Phong Lệ làm trung tâm trong Lễ hội Mục đồng',
+                'Lễ hội tôn vinh trẻ em và nuôi dưỡng ý thức gìn giữ di sản quê hương',
+                'Ảnh: Báo Nhân Dân',
+                'DÂN CHỦ LÀNG XÃ PHONG LỆ'
+              )}
+            </div>
+          </div>`
+      },
+
+      /* SLIDE 23 — TRI ÂN THIÊN NHIÊN (THẺ BO TRÒN LỒNG ẢNH CẬN CẢNH MỤC ĐỒNG & ĐÀN TRÂU) */
+      {
+        num: 23,
+        part: 'PHẦN 6 — Giá trị văn hóa & Hiện tại',
+        title: 'TRI ÂN THIÊN NHIÊN — “CON TRÂU LÀ ĐẦU CƠ NGHIỆP”',
+        layoutDesc: 'Bento 50/50 giàu cảm xúc: Bên trái khối tục ngữ nền nâu hạt dẻ kết hợp 2 thẻ phân tích triết lý nông nghiệp; Bên phải ảnh cận cảnh mục đồng và đàn trâu trên cánh đồng làng Phong Lệ (Báo Nhân Dân).',
+        bulletsSummary: [
+          '"Con trâu là đầu cơ nghiệp": Tôn vinh người bạn đồng hành trung thành gắn bó mật thiết với nhà nông.',
+          'Lối ứng xử hài hòa với đất trời: Thành kính tạ ơn đất mẹ đã nuôi dưỡng con người và vạn vật.',
+          'Gắn kết tín ngưỡng lúa nước với thông điệp gìn giữ môi trường sinh thái đồng quê.'
+        ],
+        speakerNotes: 'Không chỉ đề cao con người, lễ hội còn khắc sâu lòng tri ân thiên nhiên của cư dân lúa nước. Hình ảnh mục đồng bên con trâu trên cánh đồng Phong Lệ ở khung ảnh bên phải nhắc nhớ câu tục ngữ "Con trâu là đầu cơ nghiệp" và đạo lý biết ơn đất mẹ.',
+        render: () => `
+          ${headerHTML('PHẦN 6 • TÍN NGƯỠNG NÔNG NGHIỆP', 23, 'TRI ÂN THIÊN NHIÊN — “CON TRÂU LÀ ĐẦU CƠ NGHIỆP”', null, 'gold')}
+          <div class="split-50-50">
+            <div class="stack" style="gap:12px;">
+              <div class="bento-card dark-chestnut" style="padding:18px 22px;">
+                <span class="chip gold" style="align-self:flex-start;margin-bottom:6px;">TRIẾT LÝ VĂN MINH LÚA NƯỚC</span>
+                <div style="font-size:24px;font-weight:800;color:#FDFBF7;">“Con trâu là đầu cơ nghiệp”</div>
+              </div>
+              <div class="bento-card accent-gold">
+                <div class="card-head"><div class="card-icon gold">${ICONS.award}</div><h2 class="card-title">Tôn vinh người bạn của nhà nông</h2></div>
+                <p class="card-text">Khẳng định vị thế thiết yếu của <strong>con trâu trung thành</strong> — người bạn gắn bó bền chặt với sức kéo, mùa màng và kinh tế hộ nông dân.</p>
+              </div>
+              <div class="bento-card accent-moss">
+                <div class="card-head"><div class="card-icon moss">${ICONS.sun}</div><h2 class="card-title">Lối ứng xử hài hòa với đất trời</h2></div>
+                <p class="card-text">Tạ ơn <strong>đất mẹ, nguồn nước và khí hậu thiên nhiên</strong> đã hào phóng nuôi dưỡng con người cùng vạn vật sinh sôi.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.mucDongChanTrau,
+              'Ảnh cận cảnh mục đồng và đàn trâu thảnh thơi trên cánh đồng làng Phong Lệ',
+              'Hình ảnh mục đồng và trâu trên cánh đồng làng Phong Lệ ven sông Cẩm Lệ',
+              'Ảnh: Báo Nhân Dân',
+              'MỤC ĐỒNG & ĐỒNG QUÊ'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 24 — TÍNH CỐ KẾT CỘNG ĐỒNG & GIÁO DỤC TRUYỀN THỐNG (KÈM ẢNH SUM VẦY LÀNG XÃ) */
+      {
+        num: 24,
+        part: 'PHẦN 6 — Giá trị văn hóa & Hiện tại',
+        title: 'TÍNH CỐ KẾT CỘNG ĐỒNG & GIÁO DỤC TRUYỀN THỐNG',
+        layoutDesc: 'Bento Split 50/50 không trống chữ: Cột trái 2 thẻ về sum vầy tộc họ và "trường học thực tế" giáo dục thế hệ trẻ; Cột phải chèn ảnh đông đảo người dân địa phương sum vầy cổ vũ lễ hội (Báo Nhân Dân).',
+        bulletsSummary: [
+          'Dịp để các chi phái, tộc họ trong làng Phong Lệ sum vầy, xóa bỏ bất hòa xóm giềng.',
+          'Trở thành "trường học thực tế" giáo dục thế hệ trẻ lòng tự hào quê hương và tình yêu lao động.',
+          'Trao truyền tự nhiên đạo lý "uống nước nhớ nguồn" qua từng nghi thức cộng đồng.'
+        ],
+        speakerNotes: 'Nhìn biển người dân địa phương sum vầy rạng rỡ ở bức ảnh bên phải, ta thấy lễ hội là sợi dây cố kết cộng đồng bền chặt: xóa bỏ bất hòa xóm giềng và trở thành "trường học thực tế" nuôi dưỡng đạo lý "uống nước nhớ nguồn" cho thế hệ trẻ.',
+        render: () => `
+          ${headerHTML('PHẦN 6 • CỘNG ĐỒNG & GIÁO DỤC', 24, 'TÍNH CỐ KẾT CỘNG ĐỒNG & GIÁO DỤC TRUYỀN THỐNG', null, 'gold')}
+          <div class="split-50-50">
+            <div class="stack">
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.users}</div><h2 class="card-title">Sum vầy tộc họ, xóa bỏ bất hòa</h2></div>
+                <p class="card-text">Mỗi kỳ mở hội là dịp hội ngộ lớn để mọi chi phái, tộc họ chung tay lo việc làng, <strong>xóa bỏ bất hòa xóm giềng</strong> và thắt chặt tình đoàn kết cộng đồng.</p>
+              </div>
+              <div class="bento-card accent-gold">
+                <div class="card-head"><div class="card-icon gold">${ICONS.book}</div><h2 class="card-title">Trường học thực tế đạo lý “Uống nước nhớ nguồn”</h2></div>
+                <p class="card-text">Giáo dục thế hệ trẻ bằng trải nghiệm sống động về <strong>lòng tự hào quê hương, tình yêu lao động</strong> và trách nhiệm tiếp nối bản sắc cha ông.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.coKetCongDong,
+              'Đông đảo người dân địa phương làng Phong Lệ sum vầy theo dõi đoàn rước Mục đồng',
+              'Đông đảo người dân làng Phong Lệ sum vầy đồng hành cùng đoàn rước lễ',
+              'Ảnh: Báo Nhân Dân',
+              'GẮN KẾT CỘNG ĐỒNG'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 25 — THÁCH THỨC TRONG ĐỜI SỐNG ĐƯƠNG ĐẠI (KÈM ẢNH ĐÔ THỊ HÓA VƯỢT CẦU) */
+      {
+        num: 25,
+        part: 'PHẦN 6 — Giá trị văn hóa & Hiện tại',
+        title: 'THÁCH THỨC TRONG ĐỜI SỐNG ĐƯƠNG ĐẠI',
+        layoutDesc: 'Bento Split 50/50 sắc nét: Cột trái 2 thẻ cảnh báo viền đỏ son về đô thị hóa thu hẹp ruộng và nguy cơ sân khấu hóa; Cột phải chèn ảnh tư liệu thực tế đoàn rước phải hạ cờ phướn vượt cầu do chỉnh trang đô thị (Báo Nhân Dân).',
+        bulletsSummary: [
+          'Đô thị hóa: Đồng ruộng Phong Lệ ngày càng thu hẹp, không gian cồn Thần bị tác động và hình ảnh trẻ chăn trâu thực thụ dần vắng bóng.',
+          'Nguy cơ sân khấu hóa: Lễ hội dễ bị biến thành buổi biểu diễn kịch bản cứng nhắc nếu mất đi tính tự nhiên.',
+          'Đặt ra yêu cầu cấp bách về giải pháp bảo tồn gắn chặt với đời sống cộng đồng.'
+        ],
+        speakerNotes: 'Bức ảnh thực tế bên phải là minh chứng rõ nhất cho thách thức đương đại: do chỉnh trang đô thị, cồn Thần phải di dời khiến đoàn rước phải vượt cầu và hạ thấp cờ phướn. Bên cạnh sự thu hẹp đồng ruộng là nguy cơ sân khấu hóa cứng nhắc nếu lễ hội tách rời đời sống tự nhiên.',
+        render: () => `
+          ${headerHTML('PHẦN 6 • THỰC TRẠNG ĐƯƠNG ĐẠI', 25, 'THÁCH THỨC TRONG ĐỜI SỐNG ĐƯƠNG ĐẠI')}
+          <div class="split-50-50">
+            <div class="stack">
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.alert}</div><h2 class="card-title">Áp lực đô thị hóa thu hẹp đồng ruộng</h2></div>
+                <p class="card-text">Đồng ruộng Phong Lệ ngày càng thu hẹp trước tốc độ phát triển đô thị của Đà Nẵng; hình ảnh <strong>trẻ chăn trâu thực thụ</strong> dần biến mất khỏi đời sống thường nhật.</p>
+              </div>
+              <div class="bento-card accent-vermilion">
+                <div class="card-head"><div class="card-icon vermilion">${ICONS.target}</div><h2 class="card-title">Nguy cơ sân khấu hóa cứng nhắc</h2></div>
+                <p class="card-text">Lễ hội dễ bị biến thành <strong>buổi biểu diễn kịch bản hành chính cứng nhắc</strong> nếu đánh mất hồn cốt hồn nhiên, tự nhiên của đời sống nông thôn.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.doThiHoaCau,
+              'Đoàn rước Lễ hội Mục đồng hạ cờ phướn vượt cầu do chỉnh trang đô thị tại Phong Lệ',
+              'Do chỉnh trang đô thị, đoàn rước phải vượt cầu và hạ thấp cờ phướn',
+              'Ảnh: Báo Nhân Dân',
+              'TÁC ĐỘNG ĐÔ THỊ HÓA'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 26 — GIẢI PHÁP BẢO TỒN (3 BƯỚC INTERACTIVE STEPPER 45/55) */
+      {
+        num: 26,
+        part: 'PHẦN 6 — Giá trị văn hóa & Hiện tại',
+        title: 'GIẢI PHÁP BẢO TỒN & PHÁT HUY GIÁ TRỊ DI SẢN',
+        layoutDesc: 'Bố cục Stepper tinh giản 45/55 chuẩn PowerPoint: Cột trái gồm 3 thẻ giải pháp (Bảo tồn sống, Học đường ngoại khóa, Du lịch sinh thái), duyệt từng giải pháp bằng nút chuyển slide/bàn phím rồi mới chuyển sang Slide 27 (vẫn hỗ trợ click trực tiếp thẻ); Cột phải đồng bộ 3 ảnh thực tế.',
+        bulletsSummary: [
+          'Giải pháp 01 — Bảo tồn sống: Duy trì phục dựng định kỳ với sự tham gia chủ động của học sinh địa phương.',
+          'Giải pháp 02 — Học đường ngoại khóa: Đưa di sản vào lịch sử địa phương và trải nghiệm trò chơi dân gian.',
+          'Giải pháp 03 — Du lịch sinh thái: Định hướng du lịch trải nghiệm văn hóa đồng quê ven đô bền vững tại cồn Thần.'
+        ],
+        speakerNotes: 'Để di sản tiếp tục sống khỏe giữa lòng Đà Nẵng năng động, mình sẽ bấm qua từng giải pháp trong 3 mũi nhọn bên trái: giữ "bảo tồn sống" bằng chính học sinh địa phương, đưa lễ hội vào học đường ngoại khóa, và phát triển du lịch sinh thái văn hóa đồng quê ven đô bền vững.',
+        render: () => `
+          ${headerHTML('PHẦN 6 • INTERACTIVE STEPPER GIẢI PHÁP', 26, 'GIẢI PHÁP BẢO TỒN & PHÁT HUY GIÁ TRỊ DI SẢN', null, 'moss')}
+          ${renderStepper('slide26', 'Giải pháp', [
+            {
+              tag: 'GIẢI PHÁP 01 • CỘNG ĐỒNG CHỦ THỂ',
+              title: 'Bảo tồn sống trong lòng làng xã',
+              desc: 'Duy trì phục dựng định kỳ với <strong>sự tham gia chủ động của học sinh địa phương</strong> dưới sự truyền dạy trực tiếp của các bô lão.',
+              photo: MEDIA.baoTonSong,
+              alt: 'Học sinh địa phương chủ động tham gia bảo tồn sống Lễ hội Mục đồng làng Phong Lệ',
+              caption: 'Giải pháp 01: Giữ vai trò chủ thể cho chính học sinh địa phương',
+              source: 'Ảnh: Danang Fantasticity',
+              badge: '01 • BẢO TỒN SỐNG'
+            },
+            {
+              tag: 'GIẢI PHÁP 02 • GIÁO DỤC THẾ HỆ TRẺ',
+              title: 'Đưa di sản vào học đường & ngoại khóa',
+              desc: 'Lồng ghép vào chương trình <strong>lịch sử địa phương</strong> kết hợp tổ chức ngoại khóa trải nghiệm đồng dao, trò chơi dân gian cho học sinh Đà Nẵng.',
+              photo: MEDIA.danChuLangXa,
+              alt: 'Thế hệ trẻ trải nghiệm và học hỏi giá trị di sản Lễ hội Mục đồng Phong Lệ',
+              caption: 'Giải pháp 02: Biến lễ hội thành không gian giáo dục ngoại khóa sống động',
+              source: 'Ảnh: Báo Nhân Dân',
+              badge: '02 • HỌC ĐƯỜNG NGOẠI KHÓA'
+            },
+            {
+              tag: 'GIẢI PHÁP 03 • KINH TẾ DI SẢN XANH',
+              title: 'Kết nối du lịch sinh thái đồng quê ven đô',
+              desc: 'Định hướng phát triển <strong>du lịch trải nghiệm văn hóa đồng quê</strong> bền vững gắn với đình làng cổ và không gian sinh thái cồn Thần.',
+              photo: MEDIA.duLichSinhThai,
+              alt: 'Không gian trải nghiệm du lịch văn hóa đồng quê ven đô tại Phong Lệ, Đà Nẵng',
+              caption: 'Giải pháp 03: Phát triển du lịch trải nghiệm văn hóa đồng quê bền vững ven đô',
+              source: 'Ảnh: Danang Fantasticity',
+              badge: '03 • DU LỊCH SINH THÁI'
+            }
+          ])}`
+      },
+
+      /* SLIDE 27 — TÓM LƯỢC THÔNG ĐIỆP CỐT LÕI & VỊ THẾ DI SẢN (50/50 CÓ ẢNH TOÀN CẢNH) */
+      {
+        num: 27,
+        part: 'PHẦN 7 — Tổng kết & Q&A Chuyên sâu',
+        title: 'THÔNG ĐIỆP CỐT LÕI & VỊ THẾ DI SẢN QUỐC GIA',
+        layoutDesc: 'Bento 50/50 cân đối không khoảng trống: Cột trái kết hợp thẻ 4 trụ cột hòa quyện và khối nâu hạt dẻ khẳng định tầm vóc Di sản Quốc gia; Cột phải chèn ảnh thực tế toàn cảnh ngày hội Phong Lệ (Danang Fantasticity).',
+        bulletsSummary: [
+          'Lễ hội Mục đồng làng Phong Lệ là viên ngọc quý của văn hóa dân gian xứ Quảng.',
+          'Biểu tượng đẹp đẽ của sự hòa quyện: Con người – Đất trời – Tuổi thơ – Lao động.',
+          'Hội tụ đầy đủ tiêu chí đề nghị vinh danh Di sản văn hóa phi vật thể Quốc gia — niềm tự hào của Đà Nẵng và Việt Nam.'
+        ],
+        speakerNotes: 'Tổng kết lại, Lễ hội Mục đồng Phong Lệ thực sự là viên ngọc quý kết tinh bốn giá trị: Con người, Đất trời, Tuổi thơ và Lao động. Xứng đáng hội tụ đầy đủ tiêu chí đề nghị vinh danh Di sản văn hóa phi vật thể Quốc gia, đây là niềm tự hào chung của Đà Nẵng và cả nước.',
+        render: () => `
+          ${headerHTML('PHẦN 7 • TỔNG KẾT & VỊ THẾ', 27, 'THÔNG ĐIỆP CỐT LÕI & VỊ THẾ DI SẢN QUỐC GIA', null, 'gold')}
+          <div class="split-50-50">
+            <div class="stack" style="gap:14px;">
+              <div class="bento-card top-gold" style="gap:10px;padding:18px 20px;">
+                <span class="chip gold" style="align-self:flex-start;">VIÊN NGỌC QUÝ XỨ QUẢNG</span>
+                <p class="card-text">Biểu tượng đẹp đẽ của sự hòa quyện trọn vẹn giữa bốn trụ cột nhân bản:</p>
+                <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:2px;">
+                  <div style="padding:9px;border-radius:10px;text-align:center;font-weight:800;font-size:14.5px;background:var(--accent-gold-bg);border:1px solid var(--accent-gold);color:var(--text-chestnut);">Con người</div>
+                  <div style="padding:9px;border-radius:10px;text-align:center;font-weight:800;font-size:14.5px;background:var(--accent-moss-bg);border:1px solid var(--accent-moss);color:var(--text-chestnut);">Đất trời</div>
+                  <div style="padding:9px;border-radius:10px;text-align:center;font-weight:800;font-size:14.5px;background:var(--accent-vermilion-bg);border:1px solid var(--accent-vermilion);color:var(--text-chestnut);">Tuổi thơ</div>
+                  <div style="padding:9px;border-radius:10px;text-align:center;font-weight:800;font-size:14.5px;background:var(--bg-sand);border:1px solid var(--border-strong);color:var(--text-chestnut);">Lao động</div>
+                </div>
+              </div>
+              <div class="bento-card dark-chestnut" style="gap:8px;padding:18px 20px;">
+                <span class="chip gold" style="align-self:flex-start;">VỊ THẾ DI SẢN QUỐC GIA</span>
+                <h2 style="font-size:19px;font-weight:800;color:#FDFBF7;">Đạt tiêu chí Di sản văn hóa phi vật thể Quốc gia</h2>
+                <p style="font-size:14.5px;line-height:1.55;color:#EFE3D4;">Niềm tự hào không chỉ của riêng người dân Đà Nẵng mà của toàn bộ bản đồ văn hóa dân gian Việt Nam.</p>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.tongKetToanCanh,
+              'Toàn cảnh trang nghiêm Lễ hội Mục đồng làng Phong Lệ — niềm tự hào di sản Đà Nẵng',
+              'Viên ngọc quý di sản văn hóa dân gian xứ Quảng giữa lòng Đà Nẵng',
+              'Ảnh: Danang Fantasticity',
+              'TẦM VÓC DI SẢN QUỐC GIA'
+            )}
+          </div>`
+      },
+
+      /* SLIDE 28 — BỘ Q&A PHẢN BIỆN ACCORDION SUB-STEP (1/2) */
+      {
+        num: 28,
+        part: 'PHẦN 7 — Bộ Q&A phản biện sắc bén (Duy Khang)',
+        title: 'Q&A PHẢN BIỆN (1/2): SÂN KHẤU HÓA & ĐẤT VEN ĐÔ',
+        layoutDesc: 'Tương tác Accordion chuẩn PowerPoint Sub-step: Vừa vào slide cả 2 câu hỏi đóng gọn; bấm Next (phím mũi tên / Space / nút >) sẽ trượt mở lần lượt Phản biện 01 → Phản biện 02 rồi mới chuyển sang Slide 29; bấm Prev thu gọn ngược lại. Vẫn hỗ trợ click trực tiếp tiêu đề để đóng/mở thủ công.',
+        bulletsSummary: [
+          'Phản biện #1 (Nguy cơ sân khấu hóa): Phục dựng lễ hội làm sao tránh biến thành tiết mục diễn kịch cho du lịch?',
+          'Phản biện #2 (Thu hẹp đất nông nghiệp ven đô): Giải pháp khả thi nào để giữ cồn Thần và đồng ruộng giữa đô thị hóa Đà Nẵng?',
+          'Điều khiển trượt mở/thu gọn từng câu trả lời mượt mà bằng phím chuyển slide hoặc click trực tiếp.'
+        ],
+        speakerNotes: 'Để sẵn sàng ứng biến trước hội đồng giám khảo, nhóm đã chuẩn bị ba câu hỏi phản biện sắc bén nhất. Ở slide này, Duy Khang chỉ cần bấm nút chuyển slide để lần lượt trượt mở phần luận giải về nguy cơ sân khấu hóa và bài toán giữ đất đồng ruộng ven đô.',
+        render: () => `
+          ${headerHTML('PHẦN 7 • ACCORDION Q&A PHẢN BIỆN (1/2)', 28, 'BỘ CÂU HỎI PHẢN BIỆN — SÂN KHẤU HÓA & ĐẤT VEN ĐÔ')}
+          <div class="qa-stack">
+            <div class="qa-item">
+              <button type="button" class="qa-head-btn" aria-expanded="false">
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <span class="qa-tag">PHẢN BIỆN 01 • SÂN KHẤU HÓA</span>
+                  <span class="qa-q">Khi không còn trẻ chăn trâu thực thụ, việc phục dựng lễ hội có bị “sân khấu hóa” thành tiết mục biểu diễn cứng nhắc cho du lịch không?</span>
+                </div>
+                <span class="qa-arrow" aria-hidden="true">${ICONS.chevronDown}</span>
+              </button>
+              <div class="qa-body-outer">
+                <div class="qa-body-inner">
+                  <div class="qa-answer-box">
+                    <span class="qa-speaker-tag">Luận điểm ứng biến (Duy Khang)</span>
+                    <p>Nguy cơ sân khấu hóa chỉ xảy ra nếu biến dân làng thành khán giả và thuê diễn viên bên ngoài. Chìa khóa giữ hồn Phong Lệ là <strong>“bảo tồn sống tại chỗ”</strong>: toàn bộ đội mục đồng vẫn là chính <strong>học sinh con em Hòa Thọ Đông – Hòa Châu</strong>, giữ trọn Đêm Túc trực do bô lão truyền dạy và mâm cỗ mục đồng của dân làng — du lịch chỉ đến chứng kiến chứ không áp đặt kịch bản.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="qa-item">
+              <button type="button" class="qa-head-btn" aria-expanded="false">
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <span class="qa-tag">PHẢN BIỆN 02 • ĐẤT VEN ĐÔ</span>
+                  <span class="qa-q">Đất nông nghiệp ven đô Đà Nẵng đang thu hẹp rất nhanh — giải pháp nào khả thi để giữ cồn Thần và không gian đồng ruộng cho lễ hội?</span>
+                </div>
+                <span class="qa-arrow" aria-hidden="true">${ICONS.chevronDown}</span>
+              </button>
+              <div class="qa-body-outer">
+                <div class="qa-body-inner">
+                  <div class="qa-answer-box">
+                    <span class="qa-speaker-tag">Luận điểm ứng biến (Duy Khang)</span>
+                    <p>Không chống đô thị hóa bằng khẩu hiệu mà phải <strong>quy hoạch vùng lõi di sản sinh thái</strong>: khoanh vùng bảo vệ trục <strong>Đình làng Phong Lệ – Cồn Thần – quỹ ruộng trải nghiệm ven sông Cẩm Lệ</strong> thành công viên nông nghiệp học đường &amp; du lịch văn hóa xanh. Khi đồng ruộng tạo ra giá trị giáo dục và sinh kế bền vững, chính quyền và người dân sẽ có động lực rõ ràng để giữ đất.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>`
+      },
+
+      /* SLIDE 29 — BỘ Q&A PHẢN BIỆN ACCORDION SUB-STEP (2/2) & TÀI LIỆU THAM KHẢO */
+      {
+        num: 29,
+        part: 'PHẦN 7 — Q&A Phản biện & Tài liệu tham khảo',
+        title: 'Q&A PHẢN BIỆN (2/2): TÍNH THỰC TẾ & NGUỒN TƯ LIỆU',
+        layoutDesc: 'Tầng trên là thẻ Accordion chuẩn PowerPoint Sub-step cho Phản biện #3 (bấm Next lần 1 để trượt mở câu trả lời, lần 2 chuyển Slide 30; vẫn hỗ trợ click trực tiếp); Tầng dưới trích dẫn 4 nguồn tư liệu học thuật & báo chí chính thống.',
+        bulletsSummary: [
+          'Phản biện #3 (Tính thực tế): Trẻ em 10–14 tuổi liệu có đủ năng lực điều hành đại lễ mà không mang tính hình thức?',
+          'Luận điểm phản biện: Quy trình tuyển chọn khắt khe kết hợp Đêm Túc trực kèm cặp bài bản của bô lão.',
+          'Nguồn tư liệu chính thống: Địa chí Quảng Nam – Đà Nẵng, Hồ sơ Hòa Vang, Báo Nhân Dân, TTXVN & Danang Fantasticity.'
+        ],
+        speakerNotes: 'Câu hỏi phản biện thứ ba giải đáp băn khoăn rất thực tế về việc trẻ em 10–14 tuổi chủ trì một đại lễ phức tạp. Ngay bên dưới là danh mục tư liệu học thuật cùng các bài phóng sự chính thống từ TTXVN, Báo Nhân Dân và Danang Fantasticity mà nhóm đã tra cứu.',
+        render: () => `
+          ${headerHTML('PHẦN 7 • ACCORDION Q&A (2/2) & TƯ LIỆU', 29, 'TÍNH THỰC TẾ KHI TỔ CHỨC & HỆ THỐNG TƯ LIỆU', null, 'moss')}
+          <div style="display:flex;flex-direction:column;gap:16px;flex:1;justify-content:center;">
+            <div class="qa-item">
+              <button type="button" class="qa-head-btn" aria-expanded="false">
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <span class="qa-tag">PHẢN BIỆN 03 • TÍNH THỰC TẾ</span>
+                  <span class="qa-q">Để trẻ em 10–14 tuổi làm chủ tế đọc chúc văn và điều hành toàn bộ đại lễ — khi tổ chức có thực tế không hay chỉ mang tính hình thức?</span>
+                </div>
+                <span class="qa-arrow" aria-hidden="true">${ICONS.chevronDown}</span>
+              </button>
+              <div class="qa-body-outer">
+                <div class="qa-body-inner">
+                  <div class="qa-answer-box">
+                    <span class="qa-speaker-tag">Luận điểm ứng biến (Duy Khang)</span>
+                    <p>Hoàn toàn <strong>thực tế và khoa học</strong> nhờ quy trình tổ chức chặt chẽ: (1) <strong>Tuyển chọn gắt gao</strong> các em 10–14 tuổi thông minh, học giỏi, gia phong chuẩn mực; (2) <strong>Đêm Túc trực tại đình làng</strong> nơi các bô lão trực tiếp kèm cặp từng bước đi đứng, quỳ lạy, dâng rượu và đọc chúc văn. Các kỳ phục dựng thực tế tại Phong Lệ đã chứng minh các em làm chủ nghi lễ cực kỳ tự tin và xúc động.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bento-card soft accent-gold" style="padding:16px 22px;">
+              <div class="card-head" style="margin-bottom:8px;"><div class="card-icon gold">${ICONS.book}</div><h2 class="card-title">Kho tư liệu &amp; Nguồn tham khảo chính thống</h2></div>
+              <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;font-size:14px;line-height:1.45;">
+                <div class="bullet-item" style="font-size:13.8px;"><span class="bullet-mark gold">${ICONS.check}</span><span><strong>Địa chí Quảng Nam – Đà Nẵng</strong> &amp; Hồ sơ TT Văn hóa – Thể thao H. Hòa Vang.</span></div>
+                <div class="bullet-item" style="font-size:13.8px;"><span class="bullet-mark gold">${ICONS.check}</span><span><strong>Kỷ yếu Hội thảo Văn hóa Dân gian xứ Quảng</strong> (Viện Nghiên cứu Văn hóa).</span></div>
+                <div class="bullet-item" style="font-size:13.8px;"><span class="bullet-mark vermilion">${ICONS.check}</span><span><strong>Báo Nhân Dân:</strong> <a href="${MEDIA.nhanDanArticle}" target="_blank" rel="noopener noreferrer">Lễ hội Mục đồng — Nét văn hóa độc đáo làng quê Phong Lệ</a>.</span></div>
+                <div class="bullet-item" style="font-size:13.8px;"><span class="bullet-mark moss">${ICONS.check}</span><span><strong>TTXVN (NVSK):</strong> <a href="${MEDIA.vnaArticle}" target="_blank" rel="noopener noreferrer">Độc đáo Lễ hội Mục đồng tại Đà Nẵng</a> &amp; Danang Fantasticity.</span></div>
+              </div>
+            </div>
+          </div>`
+      },
+
+      /* SLIDE 30 — CẢM ƠN & HỎI ĐÁP (Q&A) */
+      {
+        num: 30,
+        part: 'PHẦN 7 — Kết thúc & Hỏi đáp (Q&A)',
+        title: 'CẢM ƠN & HỎI ĐÁP (Q&A)',
+        layoutDesc: 'Bento Hero 50/50 đối xứng Trang bìa: Cột trái lời cảm ơn trân trọng và danh sách 6 thành viên; Cột phải chèn ảnh thực tế nụ cười rạng rỡ ngày hội làng Phong Lệ (Danang Fantasticity).',
+        bulletsSummary: [
+          'Lời cảm ơn chân thành gửi tới thầy cô và các bạn đã lắng nghe hành trình 31 slide.',
+          'Mời thầy cô và các bạn đặt câu hỏi thảo luận cùng Nhóm 4.',
+          'Thông điệp kết: Gìn giữ nụ cười rạng rỡ của vị Chánh bái nhí là gìn giữ nét đẹp nhân văn xứ Quảng.'
+        ],
+        speakerNotes: 'Thay mặt Nhóm 4 — gồm nhóm trưởng Gia Bảo cùng Minh Đạt, Thanh Ngọc, Bảo Thy và Hoàng Long — Duy Khang xin gửi lời cảm ơn chân thành nhất tới thầy cô và các bạn đã lắng nghe trọn vẹn 31 slide về Lễ hội Mục đồng làng Phong Lệ. Nhóm 4 sẵn sàng lắng nghe góp ý và giải đáp mọi câu hỏi thảo luận!',
+        render: () => `
+          <div class="split-50-50" style="align-items:center;">
+            <div class="stack">
+              <div>
+                <span class="tag-pill vermilion">${ICONS.heart} KHÉP LẠI HÀNH TRÌNH DI SẢN</span>
+                <h1 class="hero-title" style="font-size:44px;">TRÂN TRỌNG <span>CẢM ƠN</span><br/>&amp; HỎI ĐÁP (Q&amp;A)</h1>
+                <p class="hero-lead">Cảm ơn thầy cô và các bạn đã đồng hành cùng <strong>Lễ hội Mục đồng làng Phong Lệ</strong>. Nhóm 4 sẵn sàng lắng nghe đóng góp và giải đáp mọi câu hỏi thảo luận!</p>
+              </div>
+              <div class="bento-card soft accent-gold" style="padding:16px 20px;">
+                <p class="card-text" style="font-weight:700;color:var(--text-chestnut);margin-bottom:8px;">
+                  “Gìn giữ nụ cười rạng rỡ của vị Chánh bái nhí hôm nay là gìn giữ ký ức nhân văn đẹp nhất của làng quê Việt cho mai sau.”
+                </p>
+                <div style="font-size:12.5px;font-weight:700;color:var(--accent-gold-dark);">
+                  Nhóm 4 thực hiện: Gia Bảo (Leader) • Minh Đạt • Thanh Ngọc • Bảo Thy • Hoàng Long • Duy Khang
+                </div>
+              </div>
+            </div>
+            ${photoCard(
+              MEDIA.nuCuoiKet,
+              'Nụ cười rạng rỡ của các em nhỏ mục đồng trong ngày hội làng Phong Lệ',
+              'Nụ cười rạng rỡ của các em nhỏ trong ngày hội làng Phong Lệ',
+              'Ảnh: Danang Fantasticity',
+              'XIN CHÂN THÀNH CẢM ƠN'
+            )}
+          </div>`
+      }
+    ];
+
+    // Auto-renumber all slides sequentially (01..31) so headers, overview, script, and footer always stay synchronized
+    SLIDES.forEach((s, idx) => { s.num = idx + 1; });
+
+    /* =========================================================================
+       PRESENTATION ENGINE (TAB SWITCHER, SMOOTH ACCORDION, MINI QUIZ, KEYS)
+       ========================================================================= */
+    const state = {
+      currentIndex: 0,
+      notesOpen: false,
+      quizChoice: null,
+      stepper: null
+    };
+
+    const el = {
+      stageWrapper: document.getElementById('stageWrapper'),
+      slideFrame: document.getElementById('slideFrame'),
+      slideContent: document.getElementById('slideContent'),
+      slideFooterCounter: document.getElementById('slideFooterCounter'),
+      progressTrack: document.getElementById('progressTrack'),
+      progressFill: document.getElementById('progressFill'),
+      btnNotes: document.getElementById('btnNotes'),
+      btnCloseNotes: document.getElementById('btnCloseNotes'),
+      notesDrawer: document.getElementById('notesDrawer'),
+      notesText: document.getElementById('notesText'),
+      notesLayout: document.getElementById('notesLayout'),
+      btnScript: document.getElementById('btnScript'),
+      scriptModal: document.getElementById('scriptModal'),
+      scriptSheet: document.getElementById('scriptSheet'),
+      btnCloseScript: document.getElementById('btnCloseScript'),
+      btnOverview: document.getElementById('btnOverview'),
+      overviewModal: document.getElementById('overviewModal'),
+      overviewGrid: document.getElementById('overviewGrid'),
+      btnCloseOverview: document.getElementById('btnCloseOverview'),
+      btnFullscreen: document.getElementById('btnFullscreen'),
+      fullscreenLabel: document.getElementById('fullscreenLabel'),
+      fullscreenIcon: document.getElementById('fullscreenIcon')
+    };
+
+    const FS_ENTER_ICON = '<polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />';
+    const FS_EXIT_ICON = '<polyline points="4 14 10 14 10 20" /><polyline points="20 10 14 10 14 4" /><line x1="14" y1="10" x2="21" y2="3" /><line x1="3" y1="21" x2="10" y2="14" />';
+
+    function pad2(n) { return String(n).padStart(2, '0'); }
+
+    function syncFullscreenState() {
+      const apiFs = Boolean(document.fullscreenElement || document.webkitFullscreenElement);
+      const browserFs = window.innerHeight >= screen.height - 4 && window.innerWidth >= screen.width - 4;
+      const isFs = apiFs || browserFs;
+      document.body.classList.toggle('is-fullscreen', isFs);
+      el.btnFullscreen.classList.toggle('active', isFs);
+      el.fullscreenLabel.textContent = isFs ? 'Thoát toàn màn hình' : 'Trình chiếu';
+      el.fullscreenIcon.innerHTML = isFs ? FS_EXIT_ICON : FS_ENTER_ICON;
+      el.btnFullscreen.setAttribute('aria-label', isFs ? 'Thoát chế độ toàn màn hình (Phím F hoặc Esc)' : 'Trình chiếu toàn màn hình (Phím F)');
+    }
+
+    function fitCanvas() {
+      syncFullscreenState();
+      const isFs = document.body.classList.contains('is-fullscreen');
+      const rect = el.stageWrapper.getBoundingClientRect();
+      const targetW = isFs
+        ? Math.max(Math.min(rect.width - 8, window.innerWidth * 0.96), 320)
+        : Math.max(Math.min(rect.width - 10, window.innerWidth * 0.95), 320);
+      const targetH = isFs
+        ? Math.max(Math.min(rect.height - 6, window.innerHeight * 0.92), 200)
+        : Math.max(Math.min(rect.height - 8, window.innerHeight * 0.91), 200);
+
+      // Dynamic logical canvas fills exact 96vw x 92vh with zero excess beige borders
+      const baseH = isFs ? 880 : 810;
+      let scale = targetH / baseH;
+      if (targetW / scale < 1300) {
+        scale = targetW / 1300;
+      }
+      const logicalW = Math.round(targetW / scale);
+      const logicalH = Math.round(targetH / scale);
+
+      el.slideFrame.style.width = `${logicalW}px`;
+      el.slideFrame.style.height = `${logicalH}px`;
+      el.slideFrame.style.transform = `scale(${scale})`;
+    }
+
+    function bindTabSwitchers() {
+      document.querySelectorAll('.tab-switcher-wrap').forEach(wrap => {
+        const tabs = wrap.querySelectorAll('.tab-btn');
+        const panels = wrap.querySelectorAll('.tab-panel');
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            const targetId = tab.dataset.tabTarget;
+            tabs.forEach(t => {
+              const isActive = t === tab;
+              t.classList.toggle('active', isActive);
+              t.setAttribute('aria-selected', String(isActive));
+            });
+            panels.forEach(p => {
+              p.classList.toggle('active', p.id === targetId);
+            });
+          });
+        });
+      });
+    }
+
+    function updateQuizUI() {
+      const buttons = document.querySelectorAll('#quizStage .quiz-btn');
+      const feedbackText = document.getElementById('quizFeedbackText');
+      if (!buttons.length || !feedbackText) return;
+
+      buttons.forEach(btn => {
+        btn.classList.remove('correct', 'wrong');
+        const choice = btn.dataset.choice;
+        if (state.quizChoice) {
+          if (choice === 'B') btn.classList.add('correct');
+          else if (choice === state.quizChoice) btn.classList.add('wrong');
+        }
+      });
+
+      if (!state.quizChoice) {
+        feedbackText.innerHTML = 'Bấm chọn một phương án (A, B, C hoặc D) để hiển thị đáp án đúng nổi bật viền vàng rơm!';
+      } else if (state.quizChoice === 'B') {
+        feedbackText.innerHTML = '<strong>Chính xác tuyệt đối!</strong> Đáp án nổi bật viền vàng rơm là <strong>B — “Em bé chăn trâu được chọn làm Chánh bái nhí”</strong> — người duy nhất bước lên chiếu hoa chủ trì đại lễ tế Thần Nông.';
+      } else {
+        feedbackText.innerHTML = '<strong>Chưa chính xác!</strong> Đáp án đúng nổi bật viền vàng rơm là <strong>B — “Em bé chăn trâu được chọn làm Chánh bái nhí”</strong> — nét nhân văn độc bản nhất của làng Phong Lệ.';
+      }
+    }
+
+    function bindSlide21Events() {
+      document.querySelectorAll('#quizStage .quiz-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.quizChoice = btn.dataset.choice;
+          updateQuizUI();
+        });
+      });
+      const resetBtn = document.getElementById('btnResetQuiz');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          state.quizChoice = null;
+          updateQuizUI();
+        });
+      }
+      updateQuizUI();
+    }
+
+    function updateNavButtons() {
+      // Navigation is driven purely by keyboard (ArrowRight/ArrowLeft/Space/PageUp/PageDown), click, and touch swipe.
+    }
+
+    function bindSteppers(startAtLastStep = false) {
+      state.stepper = null;
+      const container = el.slideContent.querySelector('[data-stepper]');
+      if (!container) {
+        updateNavButtons();
+        return;
+      }
+
+      const cards = Array.from(container.querySelectorAll('.stepper-card'));
+      const mediaItems = Array.from(container.querySelectorAll('.stepper-media-item'));
+      if (!cards.length) {
+        updateNavButtons();
+        return;
+      }
+
+      const controller = {
+        activeIdx: startAtLastStep ? cards.length - 1 : 0,
+        total: cards.length,
+        setStep(idx) {
+          const clamped = Math.max(0, Math.min(cards.length - 1, idx));
+          this.activeIdx = clamped;
+          cards.forEach((c, i) => {
+            const on = i === clamped;
+            c.classList.toggle('active', on);
+            c.setAttribute('aria-selected', String(on));
+          });
+          mediaItems.forEach((m, i) => {
+            m.classList.toggle('active', i === clamped);
+          });
+          updateNavButtons();
+        }
+      };
+
+      cards.forEach((c, i) => c.addEventListener('click', e => {
+        e.stopPropagation();
+        controller.setStep(i);
+      }));
+
+      state.stepper = controller;
+      controller.setStep(controller.activeIdx);
+    }
+
+    function bindAccordionEvents(startAtLastStep = false) {
+      const items = Array.from(el.slideContent.querySelectorAll('.qa-item'));
+      if (!items.length) return;
+
+      const controller = {
+        activeIdx: startAtLastStep ? items.length : 0,
+        total: items.length + 1, // 0 = all closed, 1 = Q1 open, 2 = Q1+Q2 open...
+        setStep(step) {
+          const clamped = Math.max(0, Math.min(items.length, step));
+          this.activeIdx = clamped;
+          items.forEach((item, i) => {
+            const shouldOpen = i < clamped;
+            item.classList.toggle('open', shouldOpen);
+            const btn = item.querySelector('.qa-head-btn');
+            if (btn) btn.setAttribute('aria-expanded', String(shouldOpen));
+          });
+          updateNavButtons();
+        }
+      };
+
+      items.forEach(item => {
+        const btn = item.querySelector('.qa-head-btn');
+        if (!btn) return;
+        btn.addEventListener('click', e => {
+          e.stopPropagation();
+          const isOpen = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(isOpen));
+          // Sync sub-step index with highest open question so Next/Prev stay intuitive
+          let highestOpen = 0;
+          items.forEach((it, idx) => {
+            if (it.classList.contains('open')) highestOpen = idx + 1;
+          });
+          controller.activeIdx = highestOpen;
+          updateNavButtons();
+        });
+      });
+
+      state.stepper = controller;
+      controller.setStep(controller.activeIdx);
+    }
+
+    function renderSlide(index, options = {}) {
+      state.currentIndex = Math.max(0, Math.min(SLIDES.length - 1, index));
+      const slide = SLIDES[state.currentIndex];
+      const total = SLIDES.length;
+      const numStr = `${pad2(slide.num)} / ${pad2(total)}`;
+
+      el.slideContent.style.animation = 'none';
+      el.slideContent.offsetHeight;
+      el.slideContent.style.animation = '';
+      el.slideContent.innerHTML = slide.render();
+
+      el.slideFooterCounter.textContent = `SLIDE ${numStr}`;
+      el.progressFill.style.width = `${(slide.num / total) * 100}%`;
+      el.progressTrack.setAttribute('aria-valuenow', String(slide.num));
+
+      el.notesText.textContent = slide.speakerNotes;
+      el.notesLayout.textContent = slide.layoutDesc;
+
+      const atLast = Boolean(options.startAtLastStep);
+      bindTabSwitchers();
+      bindSteppers(atLast);
+      el.slideContent.querySelectorAll('[data-jump-slide]').forEach(btn => {
+        btn.addEventListener('click', () => renderSlide(Number(btn.dataset.jumpSlide)));
+      });
+      if (el.slideContent.querySelector('#quizStage')) bindSlide21Events();
+      if (el.slideContent.querySelector('.qa-item')) bindAccordionEvents(atLast);
+    }
+
+    function goNext() {
+      if (state.stepper && state.stepper.activeIdx < state.stepper.total - 1) {
+        state.stepper.setStep(state.stepper.activeIdx + 1);
+        return;
+      }
+      if (state.currentIndex < SLIDES.length - 1) {
+        renderSlide(state.currentIndex + 1, { startAtLastStep: false });
+      }
+    }
+
+    function goPrev() {
+      if (state.stepper && state.stepper.activeIdx > 0) {
+        state.stepper.setStep(state.stepper.activeIdx - 1);
+        return;
+      }
+      if (state.currentIndex > 0) {
+        renderSlide(state.currentIndex - 1, { startAtLastStep: true });
+      }
+    }
+
+    function buildOverviewGrid() {
+      el.overviewGrid.innerHTML = SLIDES.map((s, idx) => `
+        <button type="button" class="thumb-card ${idx === state.currentIndex ? 'active' : ''}" data-idx="${idx}">
+          <span style="font-size:11.5px;font-weight:800;color:var(--accent-vermilion);">SLIDE ${pad2(s.num)}</span>
+          <span style="font-size:13.8px;font-weight:700;color:var(--text-chestnut);line-height:1.35;">${s.title}</span>
+          <span style="font-size:11.5px;color:var(--text-subtle);">${s.part}</span>
+        </button>
+      `).join('');
+
+      el.overviewGrid.querySelectorAll('.thumb-card').forEach(card => {
+        card.addEventListener('click', () => {
+          renderSlide(Number(card.dataset.idx));
+          el.overviewModal.classList.remove('open');
+        });
+      });
+    }
+
+    function buildScriptSheet() {
+      el.scriptSheet.innerHTML = SLIDES.map((s, idx) => `
+        <div class="script-entry">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+            <strong style="font-size:15.5px;color:var(--text-chestnut);">SLIDE ${pad2(s.num)}: ${s.title}</strong>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="chip sand">${s.part}</span>
+              <button type="button" class="btn-secondary" style="min-height:32px;padding:4px 10px;font-size:12px;" data-jump="${idx}">Mở slide</button>
+            </div>
+          </div>
+          <div style="font-size:13.8px;color:var(--text-muted);line-height:1.5;"><strong>Visual &amp; Tương tác:</strong> ${s.layoutDesc}</div>
+          <div style="font-size:14px;color:var(--text-primary);line-height:1.52;">
+            <strong>Nội dung thẻ chữ:</strong>
+            <ul style="margin:4px 0 0 18px;">${s.bulletsSummary.map(b => `<li>${b}</li>`).join('')}</ul>
+          </div>
+          <div style="font-size:14px;color:var(--text-chestnut);background:var(--bg-sand);padding:10px 12px;border-radius:10px;line-height:1.55;">
+            <strong>Speaker Notes:</strong> ${s.speakerNotes}
+          </div>
+        </div>
+      `).join('');
+
+      el.scriptSheet.querySelectorAll('[data-jump]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          renderSlide(Number(btn.dataset.jump));
+          el.scriptModal.classList.remove('open');
+        });
+      });
+    }
+
+    function toggleNotes(force) {
+      state.notesOpen = typeof force === 'boolean' ? force : !state.notesOpen;
+      el.notesDrawer.classList.toggle('open', state.notesOpen);
+      el.btnNotes.classList.toggle('active', state.notesOpen);
+      el.btnNotes.setAttribute('aria-pressed', String(state.notesOpen));
+    }
+
+    function toggleFullscreen() {
+      const fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+      if (!fsEl) {
+        const req = document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen;
+        req?.call(document.documentElement)?.catch?.(() => {});
+      } else {
+        const exit = document.exitFullscreen || document.webkitExitFullscreen;
+        exit?.call(document)?.catch?.(() => {});
+      }
+    }
+
+    el.btnNotes.addEventListener('click', () => toggleNotes());
+    el.btnCloseNotes.addEventListener('click', () => toggleNotes(false));
+
+    el.btnOverview.addEventListener('click', () => { buildOverviewGrid(); el.overviewModal.classList.add('open'); });
+    el.btnCloseOverview.addEventListener('click', () => el.overviewModal.classList.remove('open'));
+    el.overviewModal.addEventListener('click', e => { if (e.target === el.overviewModal) el.overviewModal.classList.remove('open'); });
+
+    el.btnScript.addEventListener('click', () => { buildScriptSheet(); el.scriptModal.classList.add('open'); });
+    el.btnCloseScript.addEventListener('click', () => el.scriptModal.classList.remove('open'));
+    el.scriptModal.addEventListener('click', e => { if (e.target === el.scriptModal) el.scriptModal.classList.remove('open'); });
+
+    el.btnFullscreen.addEventListener('click', toggleFullscreen);
+
+    // PowerPoint-style click on empty slide area advances sub-step / next slide
+    el.slideFrame.addEventListener('click', e => {
+      if (window.getSelection?.().toString()) return;
+      if (e.target.closest('button, a, video, iframe, input, textarea, [role="tab"]')) return;
+      goNext();
+    });
+
+    el.progressTrack.addEventListener('click', e => {
+      const rect = el.progressTrack.getBoundingClientRect();
+      const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      renderSlide(Math.min(SLIDES.length - 1, Math.floor(ratio * SLIDES.length)));
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.key === 'Escape') {
+        el.overviewModal.classList.remove('open');
+        el.scriptModal.classList.remove('open');
+        return;
+      }
+      if (el.overviewModal.classList.contains('open') || el.scriptModal.classList.contains('open')) return;
+
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); goNext(); }
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); goPrev(); }
+      else if (e.key === 'Home') { e.preventDefault(); renderSlide(0); }
+      else if (e.key === 'End') { e.preventDefault(); renderSlide(SLIDES.length - 1); }
+      else if (e.key.toLowerCase() === 'n') toggleNotes();
+      else if (e.key.toLowerCase() === 'g') { buildOverviewGrid(); el.overviewModal.classList.add('open'); }
+      else if (e.key.toLowerCase() === 's') { buildScriptSheet(); el.scriptModal.classList.add('open'); }
+      else if (e.key.toLowerCase() === 'f') toggleFullscreen();
+    });
+
+    let touchStartX = 0;
+    el.stageWrapper.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+    el.stageWrapper.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 48) {
+        if (dx < 0) goNext();
+        else goPrev();
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', fitCanvas);
+    const onFsChange = () => {
+      syncFullscreenState();
+      requestAnimationFrame(() => requestAnimationFrame(fitCanvas));
+    };
+    document.addEventListener('fullscreenchange', onFsChange);
+    document.addEventListener('webkitfullscreenchange', onFsChange);
+    if (typeof ResizeObserver !== 'undefined') new ResizeObserver(fitCanvas).observe(el.stageWrapper);
+
+    renderSlide(0);
+    fitCanvas();
+  </script>
+</body>
+</html>
